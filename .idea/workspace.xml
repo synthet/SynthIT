@@ -29,17 +29,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="000095b2-f92a-48aa-a434-da4794759f37" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/Contract.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/Contract.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rest_a-master.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/fragment.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392978118166" ignored="false" />
     <file path="/TweetsOperation.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392870415706" ignored="false" />
-    <file path="/strings.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392799898288" ignored="false" />
+    <file path="/strings.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392983079759" ignored="false" />
     <file path="/MainActivity.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392871813912" ignored="false" />
     <file path="/Contract.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392978198985" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392974207718" ignored="false" />
@@ -67,10 +65,9 @@
     <file path="$PROJECT_DIR$/deps/DataDroid/gen/com/foxykeep/datadroid/BuildConfig.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392804479519" ignored="false" />
     <file path="/activity_main.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392804805961" ignored="false" />
     <file path="/RestProvider.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392979551517" ignored="false" />
-    <file path="/Dummy.txt" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392976361952" ignored="false" />
+    <file path="/Dummy.txt" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392980176476" ignored="false" />
     <file path="/MainMenu.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392974108084" ignored="false" />
-    <file path="$PROJECT_DIR$/gen/ru/synthet/synthit/R.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392974210763" ignored="false" />
-    <file path="/UsersOperation.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392870351487" ignored="false" />
+    <file path="/UsersOperation.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392983143103" ignored="false" />
     <file path="/CompsActivity.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392974936789" ignored="false" />
     <file path="/ContractComps.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392978145974" ignored="false" />
     <file path="/CompsOperation.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392979616218" ignored="false" />
@@ -134,10 +131,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CompsActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CompsActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="142" column="153" selection-start="4203" selection-end="4203" vertical-scroll-proportion="3.5732758">
+            <state line="142" column="153" selection-start="4203" selection-end="4203" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1546#1554#0" expanded="true" />
@@ -168,13 +165,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsersOperation.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="UsersOperation.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="63" selection-start="2225" selection-end="2225" vertical-scroll-proportion="0.0">
+            <state line="22" column="90" selection-start="1042" selection-end="1042" vertical-scroll-proportion="0.54956895">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="45" selection-start="372" selection-end="372" vertical-scroll-proportion="-4.8">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -248,8 +254,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java" />
-        <option value="$PROJECT_DIR$/src/ru/synthet/synthit/ui/MainActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/user_dialog.xml" />
         <option value="$PROJECT_DIR$/res/layout/main_menu.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
@@ -264,6 +268,8 @@
         <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java" />
         <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java" />
         <option value="$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java" />
       </list>
     </option>
   </component>
@@ -821,7 +827,11 @@
       <created>1392976364085</created>
       <updated>1392976364085</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="initial commit">
+      <created>1392980180682</created>
+      <updated>1392980180682</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -920,16 +930,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/main_menu.xml">
-      <provider editor-type-id="text-editor">
-        <state line="7" column="4" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="57" selection-start="772" selection-end="772" vertical-scroll-proportion="0.0">
@@ -1021,22 +1021,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="62" selection-start="2305" selection-end="2305" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="63" selection-start="2225" selection-end="2225" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/Contract.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="32" selection-start="1063" selection-end="1063" vertical-scroll-proportion="0.0">
@@ -1048,10 +1032,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="153" selection-start="4203" selection-end="4203" vertical-scroll-proportion="3.5732758">
+        <state line="142" column="153" selection-start="4203" selection-end="4203" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1546#1554#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="45" selection-start="372" selection-end="372" vertical-scroll-proportion="-4.8">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="62" selection-start="2305" selection-end="2305" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="90" selection-start="1042" selection-end="1042" vertical-scroll-proportion="0.54956895">
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

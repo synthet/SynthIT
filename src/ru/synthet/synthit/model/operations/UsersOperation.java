@@ -6,6 +6,7 @@ import org.json.JSONException;
 import android.content.ContentValues;
 import android.content.Context;
 import android.os.Bundle;
+import ru.synthet.synthit.R;
 import ru.synthet.synthit.model.provider.Contract;
 import com.foxykeep.datadroid.exception.ConnectionException;
 import com.foxykeep.datadroid.exception.CustomRequestException;
@@ -18,7 +19,7 @@ public final class UsersOperation implements Operation {
 	@Override
 	public Bundle execute(Context context, Request request)
 			throws ConnectionException, DataException, CustomRequestException {
-		NetworkConnection connection = new NetworkConnection(context, "http://10.1.2.12/ocs/index.php/ad/users");
+		NetworkConnection connection = new NetworkConnection(context, context.getResources().getString(R.string.url_users));
 		HashMap<String, String> params = new HashMap<String, String>();
 		//params.put("screen_name", request.getString("screen_name"));
 		connection.setParameters(params);

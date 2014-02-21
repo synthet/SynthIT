@@ -4,5 +4,6 @@
     <string name="app_name">IT Accounting</string>
     <string name="update">Update</string>
     <string name="faled_to_load_data">Faled to load data</string><string name="users">Юзеры</string><string name="comps">Компы</string>
+    <string name="url_users">http://10.1.2.12/ocs/index.php/ad/users</string>
 
 </resources>
