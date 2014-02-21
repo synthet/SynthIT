@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">IT Accounting</string>
+    <string name="update">Update</string>
+    <string name="faled_to_load_data">Faled to load data</string><string name="users">Юзеры</string><string name="comps">Компы</string>
+
+</resources>

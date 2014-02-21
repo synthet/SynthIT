@@ -1,0 +1,123 @@
+package ru.synthet.synthit.model.provider;
+
+import android.content.ContentProvider;
+import android.content.ContentValues;
+import android.content.Context;
+import android.content.UriMatcher;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteDatabase.CursorFactory;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.net.Uri;
+
+public class RestProvider extends ContentProvider {
+	final String TAG = getClass().getSimpleName();
+	
+	private static final String TABLE_USERS = "users";
+	
+	private static final String DB_NAME = TABLE_USERS + ".db";
+	private static final int DB_VERSION = 1;
+	
+	private static final UriMatcher sUriMatcher;
+	
+	private static final int PATH_ROOT = 0;
+	private static final int PATH_USERS = 1;
+	
+	static {
+		sUriMatcher = new UriMatcher(PATH_ROOT);
+		sUriMatcher.addURI(Contract.AUTHORITY, Contract.Users.CONTENT_PATH, PATH_USERS);
+	}
+	
+	private DatabaseHelper mDatabaseHelper;
+	
+	class DatabaseHelper extends SQLiteOpenHelper {
+
+		public DatabaseHelper(Context context, String name, CursorFactory factory, int version) {
+			super(context, name, factory, version);
+		}
+
+		@Override
+		public void onCreate(SQLiteDatabase db) {
+			String sql = 
+				"create table " + TABLE_USERS + " (" +
+					Contract.Users._ID + " integer primary key autoincrement, " +
+					Contract.Users.UID + " text , " +
+					Contract.Users.DN + " text, " +
+					Contract.Users.DISPLAY_NAME + " text, " +
+                    Contract.Users.DESCRIPTION + " text, " +
+                    Contract.Users.PASSWORD + " text" +
+				")";
+			db.execSQL(sql);
+		}
+
+		@Override
+		public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+		}
+		
+	}
+
+	@Override
+	public boolean onCreate() {
+		mDatabaseHelper = new DatabaseHelper(getContext(), DB_NAME, null, DB_VERSION);
+		return true;
+	}
+	
+
+	@Override
+	public Cursor query(Uri uri, String[] projection, String selection,
+			String[] selectionArgs, String sortOrder) {
+		switch (sUriMatcher.match(uri)) {
+		case PATH_USERS: {
+			Cursor cursor = mDatabaseHelper.getReadableDatabase().query(TABLE_USERS, projection, selection, selectionArgs, null, null, sortOrder);
+			cursor.setNotificationUri(getContext().getContentResolver(), Contract.Users.CONTENT_URI);
+			return cursor;
+		}
+		default:
+			return null;
+		}
+	}
+
+	@Override
+	public String getType(Uri uri) {
+		switch (sUriMatcher.match(uri)) {
+		case PATH_USERS:
+			return Contract.Users.CONTENT_TYPE;
+		default:
+			return null;
+		}
+	}
+
+	@Override
+	public Uri insert(Uri uri, ContentValues values) {
+		switch (sUriMatcher.match(uri)) {
+		case PATH_USERS: {
+			mDatabaseHelper.getWritableDatabase().insert(TABLE_USERS, null, values);
+			getContext().getContentResolver().notifyChange(Contract.Users.CONTENT_URI, null);
+		}
+		default:
+			return null;
+		}
+	}
+
+	@Override
+	public int delete(Uri uri, String selection, String[] selectionArgs) {
+		switch (sUriMatcher.match(uri)) {
+		case PATH_USERS:
+			return mDatabaseHelper.getWritableDatabase().delete(TABLE_USERS, selection, selectionArgs);
+		default:
+			return 0;
+		}
+	}
+
+	@Override
+	public int update(Uri uri, ContentValues values, String selection,
+			String[] selectionArgs) {
+		switch (sUriMatcher.match(uri)) {
+		case PATH_USERS:
+			return mDatabaseHelper.getWritableDatabase().update(TABLE_USERS, values, selection, selectionArgs);
+		default:
+			return 0;
+		}
+	}
+
+}
