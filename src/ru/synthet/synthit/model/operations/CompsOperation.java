@@ -44,8 +44,8 @@ public final class CompsOperation implements Operation {
 			throw new DataException(e.getMessage());
 		}
 		
-		context.getContentResolver().delete(Contract.Users.CONTENT_URI, null, null);
-		context.getContentResolver().bulkInsert(Contract.Users.CONTENT_URI, tweetsValues);
+		context.getContentResolver().delete(Contract.Comps.CONTENT_URI, null, null);
+		context.getContentResolver().bulkInsert(Contract.Comps.CONTENT_URI, tweetsValues);
 		return null;
 	}
 	

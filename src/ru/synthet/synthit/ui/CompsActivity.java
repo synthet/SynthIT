@@ -32,12 +32,12 @@ public class CompsActivity extends FragmentActivity implements AdapterView.OnIte
 	
 	private static final int LOADER_ID = 1;
 	private static final String[] PROJECTION = { 
-		Contract.Users._ID,
-		Contract.Users.UID,
-		Contract.Users.DN,
-        Contract.Users.DISPLAY_NAME,
-        Contract.Users.DESCRIPTION,
-        Contract.Users.PASSWORD
+		Contract.Comps._ID,
+		Contract.Comps.UID,
+		Contract.Comps.DN,
+        Contract.Comps.DISPLAY_NAME,
+        Contract.Comps.DESCRIPTION,
+        Contract.Comps.PASSWORD
 	};
 	
 	private LoaderCallbacks<Cursor> loaderCallbacks = new LoaderCallbacks<Cursor>() {
@@ -46,7 +46,7 @@ public class CompsActivity extends FragmentActivity implements AdapterView.OnIte
 		public Loader<Cursor> onCreateLoader(int loaderId, Bundle arg1) {
 			return new CursorLoader(
 				CompsActivity.this,
-				Contract.Users.CONTENT_URI,
+				Contract.Comps.CONTENT_URI,
 				PROJECTION,
 				null,
 				null,
@@ -110,7 +110,7 @@ public class CompsActivity extends FragmentActivity implements AdapterView.OnIte
 		adapter = new SimpleCursorAdapter(this,
 			R.layout.tweet_view, 
 			null, 
-			new String[]{ Contract.Users.UID, Contract.Users.DISPLAY_NAME },
+			new String[]{ Contract.Comps.UID, Contract.Comps.DISPLAY_NAME },
 			new int[]{ R.id.user_name_text_view, R.id.body_text_view }, 
 			0);
 		listView.setAdapter(adapter);
@@ -141,16 +141,16 @@ public class CompsActivity extends FragmentActivity implements AdapterView.OnIte
 
         View dialogView = getLayoutInflater().inflate(R.layout.user_dialog, null);
         builder.setView(dialogView).
-                setTitle(cursor.getString(cursor.getColumnIndex(Contract.Users.UID))).
+                setTitle(cursor.getString(cursor.getColumnIndex(Contract.Comps.UID))).
                 setCancelable(true).
                 create().
                 show();
 
         TextView textUser = (TextView) dialogView.findViewById(R.id.textUser);
-        textUser.setText(cursor.getString(cursor.getColumnIndex(Contract.Users.DISPLAY_NAME)));
+        textUser.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.DISPLAY_NAME)));
         TextView textDesc = (TextView) dialogView.findViewById(R.id.textDesc);
-        textDesc.setText(cursor.getString(cursor.getColumnIndex(Contract.Users.DESCRIPTION)));
+        textDesc.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.DESCRIPTION)));
         TextView textPass = (TextView) dialogView.findViewById(R.id.textPass);
-        textPass.setText(cursor.getString(cursor.getColumnIndex(Contract.Users.PASSWORD)));
+        textPass.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.PASSWORD)));
     }
 }

@@ -14,18 +14,21 @@ public class RestProvider extends ContentProvider {
 	final String TAG = getClass().getSimpleName();
 	
 	private static final String TABLE_USERS = "users";
-	
-	private static final String DB_NAME = TABLE_USERS + ".db";
+    private static final String TABLE_COMPS = "comps";
+
+	private static final String DB_NAME =  "synthit.db";
 	private static final int DB_VERSION = 1;
 	
 	private static final UriMatcher sUriMatcher;
 	
 	private static final int PATH_ROOT = 0;
 	private static final int PATH_USERS = 1;
-	
+    private static final int PATH_COMPS = 2;
+
 	static {
 		sUriMatcher = new UriMatcher(PATH_ROOT);
 		sUriMatcher.addURI(Contract.AUTHORITY, Contract.Users.CONTENT_PATH, PATH_USERS);
+        sUriMatcher.addURI(Contract.AUTHORITY, Contract.Comps.CONTENT_PATH, PATH_COMPS);
 	}
 	
 	private DatabaseHelper mDatabaseHelper;
@@ -48,6 +51,17 @@ public class RestProvider extends ContentProvider {
                     Contract.Users.PASSWORD + " text" +
 				")";
 			db.execSQL(sql);
+
+            sql =
+                "create table " + TABLE_COMPS + " (" +
+                    Contract.Users._ID + " integer primary key autoincrement, " +
+                    Contract.Users.UID + " text , " +
+                    Contract.Users.DN + " text, " +
+                    Contract.Users.DISPLAY_NAME + " text, " +
+                    Contract.Users.DESCRIPTION + " text, " +
+                    Contract.Users.PASSWORD + " text" +
+                ")";
+            db.execSQL(sql);
 		}
 
 		@Override
@@ -71,6 +85,11 @@ public class RestProvider extends ContentProvider {
 			Cursor cursor = mDatabaseHelper.getReadableDatabase().query(TABLE_USERS, projection, selection, selectionArgs, null, null, sortOrder);
 			cursor.setNotificationUri(getContext().getContentResolver(), Contract.Users.CONTENT_URI);
 			return cursor;
+        }
+        case PATH_COMPS: {
+            Cursor cursor = mDatabaseHelper.getReadableDatabase().query(TABLE_COMPS, projection, selection, selectionArgs, null, null, sortOrder);
+            cursor.setNotificationUri(getContext().getContentResolver(), Contract.Users.CONTENT_URI);
+            return cursor;
 		}
 		default:
 			return null;
@@ -82,6 +101,8 @@ public class RestProvider extends ContentProvider {
 		switch (sUriMatcher.match(uri)) {
 		case PATH_USERS:
 			return Contract.Users.CONTENT_TYPE;
+        case PATH_COMPS:
+            return Contract.Comps.CONTENT_TYPE;
 		default:
 			return null;
 		}
@@ -94,6 +115,10 @@ public class RestProvider extends ContentProvider {
 			mDatabaseHelper.getWritableDatabase().insert(TABLE_USERS, null, values);
 			getContext().getContentResolver().notifyChange(Contract.Users.CONTENT_URI, null);
 		}
+        case PATH_COMPS: {
+            mDatabaseHelper.getWritableDatabase().insert(TABLE_COMPS, null, values);
+            getContext().getContentResolver().notifyChange(Contract.Users.CONTENT_URI, null);
+        }
 		default:
 			return null;
 		}
@@ -104,6 +129,8 @@ public class RestProvider extends ContentProvider {
 		switch (sUriMatcher.match(uri)) {
 		case PATH_USERS:
 			return mDatabaseHelper.getWritableDatabase().delete(TABLE_USERS, selection, selectionArgs);
+        case PATH_COMPS:
+            return mDatabaseHelper.getWritableDatabase().delete(TABLE_COMPS, selection, selectionArgs);
 		default:
 			return 0;
 		}
@@ -115,6 +142,8 @@ public class RestProvider extends ContentProvider {
 		switch (sUriMatcher.match(uri)) {
 		case PATH_USERS:
 			return mDatabaseHelper.getWritableDatabase().update(TABLE_USERS, values, selection, selectionArgs);
+        case PATH_COMPS:
+            return mDatabaseHelper.getWritableDatabase().update(TABLE_COMPS, values, selection, selectionArgs);
 		default:
 			return 0;
 		}
