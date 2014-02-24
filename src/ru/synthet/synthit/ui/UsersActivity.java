@@ -1,8 +1,9 @@
 package ru.synthet.synthit.ui;
 
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.TextView;
+import android.widget.*;
 import ru.synthet.synthit.R;
 import ru.synthet.synthit.model.RequestFactory;
 import ru.synthet.synthit.model.RestRequestManager;
@@ -18,15 +19,15 @@ import android.support.v4.app.LoaderManager.LoaderCallbacks;
 import android.support.v4.content.Loader;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.widget.SimpleCursorAdapter;
-import android.widget.ListView;
 import android.app.AlertDialog;
 import android.database.Cursor;
 
-public class UsersActivity extends FragmentActivity implements AdapterView.OnItemClickListener {
+public class UsersActivity extends FragmentActivity implements AdapterView.OnItemClickListener, TextWatcher {
 
 	final String TAG = getClass().getSimpleName();
 
 	private PullToRefreshListView listView;
+    private EditText inputSearch;
 	private SimpleCursorAdapter adapter;
 	
 	private RestRequestManager requestManager;
@@ -102,12 +103,15 @@ public class UsersActivity extends FragmentActivity implements AdapterView.OnIte
 			showError();
 		}
 	};
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
+
+        inputSearch = (EditText) findViewById(R.id.inputSearch);
+        inputSearch.addTextChangedListener(this);
+
 		listView = (PullToRefreshListView)findViewById(R.id.listView);
 		adapter = new SimpleCursorAdapter(this,
 			R.layout.tweet_view, 
@@ -115,6 +119,18 @@ public class UsersActivity extends FragmentActivity implements AdapterView.OnIte
 			new String[]{ Contract.Users.UID, Contract.Users.DISPLAY_NAME },
 			new int[]{ R.id.user_name_text_view, R.id.body_text_view }, 
 			0);
+        adapter.setFilterQueryProvider(new FilterQueryProvider() {
+            public Cursor runQuery(CharSequence constraint) {
+                Cursor mCursor =  getContentResolver().query(Contract.Users.CONTENT_URI,
+                        PROJECTION,
+                        Contract.Users.UID + " LIKE ?",
+                        new String[] { constraint.toString()+"%" },
+                        null);
+
+                return mCursor;
+            }
+
+        });
 		listView.setAdapter(adapter);
 		listView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
 
@@ -156,5 +172,20 @@ public class UsersActivity extends FragmentActivity implements AdapterView.OnIte
         textPass.setText(cursor.getString(cursor.getColumnIndex(Contract.Users.PASSWORD)));
         TextView textPass2 = (TextView) dialogView.findViewById(R.id.textPass2);
         textPass2.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.PASSWORD_AD)));
+    }
+
+    @Override
+    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+        this.adapter.getFilter().filter(s);
+    }
+
+    @Override
+    public void afterTextChanged(Editable s) {
+
     }
 }
