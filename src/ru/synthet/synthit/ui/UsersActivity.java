@@ -38,6 +38,7 @@ public class UsersActivity extends FragmentActivity implements AdapterView.OnIte
 		Contract.Users.UID,
 		Contract.Users.DN,
         Contract.Users.DISPLAY_NAME,
+        Contract.Users.DISPLAY_NAME_UP,
         Contract.Users.DESCRIPTION,
         Contract.Users.PASSWORD,
         Contract.Users.PASSWORD_AD
@@ -120,13 +121,13 @@ public class UsersActivity extends FragmentActivity implements AdapterView.OnIte
 			new int[]{ R.id.user_name_text_view, R.id.body_text_view }, 
 			0);
         adapter.setFilterQueryProvider(new FilterQueryProvider() {
+
             public Cursor runQuery(CharSequence constraint) {
                 Cursor mCursor =  getContentResolver().query(Contract.Users.CONTENT_URI,
                         PROJECTION,
-                        Contract.Users.UID + " LIKE ?",
-                        new String[] { constraint.toString()+"%" },
+                        Contract.Users.UID + " LIKE ? OR " + Contract.Users.DISPLAY_NAME_UP + " LIKE ?",
+                        new String[] { constraint.toString()+"%", constraint.toString().toUpperCase()+"%" },
                         null);
-
                 return mCursor;
             }
 

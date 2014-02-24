@@ -47,6 +47,7 @@ public class RestProvider extends ContentProvider {
 					Contract.Users.UID + " text , " +
 					Contract.Users.DN + " text, " +
 					Contract.Users.DISPLAY_NAME + " text, " +
+                    Contract.Users.DISPLAY_NAME_UP + " text, " +
                     Contract.Users.DESCRIPTION + " text, " +
                     Contract.Users.PASSWORD + " text, " +
                     Contract.Users.PASSWORD_AD + " text" +

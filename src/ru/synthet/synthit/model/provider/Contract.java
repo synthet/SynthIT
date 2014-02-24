@@ -12,6 +12,7 @@ public final class Contract {
         public static final String DN = "dn";
 		public static final String UID = "uid";
 		public static final String DISPLAY_NAME = "displayName";
+        public static final String DISPLAY_NAME_UP = "displayNameUp";
         public static final String DESCRIPTION = "description";
         public static final String PASSWORD = "password";
         public static final String PASSWORD_AD = "password_ad";

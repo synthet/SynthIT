@@ -38,7 +38,9 @@ public final class UsersOperation implements Operation {
                     ContentValues values = new ContentValues();
                     values.put("uid", jsonArray.getJSONObject(i).getString("uid"));
                     values.put("dn", jsonArray.getJSONObject(i).getString("dn"));
-                    values.put("displayName", jsonArray.getJSONObject(i).getString("displayName"));
+                    String displayName = jsonArray.getJSONObject(i).getString("displayName");
+                    values.put("displayName", displayName);
+                    values.put("displayNameUp", displayName.toUpperCase());
                     values.put("description", jsonArray.getJSONObject(i).getString("description"));
                     values.put("password", password);
                     values.put("password_ad", password_ad);
