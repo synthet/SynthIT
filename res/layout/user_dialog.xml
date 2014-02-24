@@ -17,10 +17,18 @@
             android:text="New Text"
             android:id="@+id/textDesc" android:layout_gravity="left|center_vertical" android:layout_margin="10dp"
             android:textColor="@color/dialogBlueHolo"/>
-    <TextView
+    <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="New Text"
-            android:id="@+id/textPass" android:layout_gravity="left|center_vertical" android:layout_margin="10dp"
-            android:textStyle="bold" android:textColor="@color/dialogBlueHolo"/>
+            android:layout_height="wrap_content" android:layout_gravity="left|center_vertical">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textPass" android:layout_gravity="left|center_vertical" android:layout_margin="10dp"
+                android:textStyle="bold" android:textColor="@color/dialogBlueHolo" android:layout_weight="1"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:id="@+id/textPass2" android:layout_gravity="left|center_vertical" android:layout_margin="10dp"
+                  android:textStyle="bold" android:textColor="@color/dialogBlueHolo" android:layout_weight="1"/>
+    </LinearLayout>
 </LinearLayout>

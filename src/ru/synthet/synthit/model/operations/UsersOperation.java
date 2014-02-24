@@ -26,18 +26,18 @@ public final class UsersOperation implements Operation {
 		NetworkConnection.ConnectionResult result = connection.execute();
 		ContentValues[] tweetsValues;
 		try {
-			JSONArray tweetsJson = new JSONArray(result.body);
-			tweetsValues = new ContentValues[tweetsJson.length()];
-			for (int i = 0; i < tweetsJson.length(); ++i) {
-                String password = tweetsJson.getJSONObject(i).getString("password");
+			JSONArray jsonArray = new JSONArray(result.body);
+			tweetsValues = new ContentValues[jsonArray.length()];
+			for (int i = 0; i < jsonArray.length(); ++i) {
+                String password = jsonArray.getJSONObject(i).getString("password");
                 if ((password.length() > 0) && !(password.equals("null"))) {
-                    ContentValues tweet = new ContentValues();
-                    tweet.put("uid", tweetsJson.getJSONObject(i).getString("uid"));
-                    tweet.put("dn", tweetsJson.getJSONObject(i).getString("dn"));
-                    tweet.put("displayName", tweetsJson.getJSONObject(i).getString("displayName"));
-                    tweet.put("description", tweetsJson.getJSONObject(i).getString("description"));
-                    tweet.put("password", password);
-                    tweetsValues[i] = tweet;
+                    ContentValues values = new ContentValues();
+                    values.put("uid", jsonArray.getJSONObject(i).getString("uid"));
+                    values.put("dn", jsonArray.getJSONObject(i).getString("dn"));
+                    values.put("displayName", jsonArray.getJSONObject(i).getString("displayName"));
+                    values.put("description", jsonArray.getJSONObject(i).getString("description"));
+                    values.put("password", password);
+                    tweetsValues[i] = values;
                 }
 			}
 		} catch (JSONException e) {

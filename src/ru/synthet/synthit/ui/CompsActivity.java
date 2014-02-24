@@ -37,7 +37,8 @@ public class CompsActivity extends FragmentActivity implements AdapterView.OnIte
 		Contract.Comps.DN,
         Contract.Comps.DISPLAY_NAME,
         Contract.Comps.DESCRIPTION,
-        Contract.Comps.PASSWORD
+        Contract.Comps.PASSWORD,
+        Contract.Comps.PASSWORD_AD
 	};
 	
 	private LoaderCallbacks<Cursor> loaderCallbacks = new LoaderCallbacks<Cursor>() {
@@ -152,5 +153,7 @@ public class CompsActivity extends FragmentActivity implements AdapterView.OnIte
         textDesc.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.DESCRIPTION)));
         TextView textPass = (TextView) dialogView.findViewById(R.id.textPass);
         textPass.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.PASSWORD)));
+        TextView textPass2 = (TextView) dialogView.findViewById(R.id.textPass2);
+        textPass2.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.PASSWORD_AD)));
     }
 }

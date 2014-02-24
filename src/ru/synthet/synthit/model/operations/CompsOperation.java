@@ -3,6 +3,7 @@ package ru.synthet.synthit.model.operations;
 import android.content.ContentValues;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import com.foxykeep.datadroid.exception.ConnectionException;
 import com.foxykeep.datadroid.exception.CustomRequestException;
 import com.foxykeep.datadroid.exception.DataException;
@@ -26,26 +27,34 @@ public final class CompsOperation implements Operation {
 		NetworkConnection.ConnectionResult result = connection.execute();
 		ContentValues[] tweetsValues;
 		try {
-			JSONArray tweetsJson = new JSONArray(result.body);
-			tweetsValues = new ContentValues[tweetsJson.length()];
-			for (int i = 0; i < tweetsJson.length(); ++i) {
-                String password = tweetsJson.getJSONObject(i).getString("password");
-                if ((password.length() > 0) && !(password.equals("null"))) {
-                    ContentValues tweet = new ContentValues();
-                    tweet.put("uid", tweetsJson.getJSONObject(i).getString("uid"));
-                    tweet.put("dn", tweetsJson.getJSONObject(i).getString("dn"));
-                    tweet.put("displayName", tweetsJson.getJSONObject(i).getString("displayName"));
-                    tweet.put("description", tweetsJson.getJSONObject(i).getString("description"));
-                    tweet.put("password", password);
-                    tweetsValues[i] = tweet;
+			JSONArray jsonArray = new JSONArray(result.body);
+			tweetsValues = new ContentValues[jsonArray.length()];
+			for (int i = 0; i < jsonArray.length(); ++i) {
+                String password = jsonArray.getJSONObject(i).getString("password");
+                String password_ad = "";
+                if (jsonArray.getJSONObject(i).has("password_ad"))
+                    password_ad = jsonArray.getJSONObject(i).getString("password_ad");
+                if (((password.length() > 0) && !(password.equals("null"))) ||
+                        ((password_ad.length() > 0) && !(password_ad.equals("null")))) {
+                    ContentValues values = new ContentValues();
+                    values.put("uid", jsonArray.getJSONObject(i).getString("uid"));
+                    values.put("dn", jsonArray.getJSONObject(i).getString("dn"));
+                    values.put("displayName", jsonArray.getJSONObject(i).getString("displayName"));
+                    values.put("description", jsonArray.getJSONObject(i).getString("description"));
+                    values.put("password", password);
+                    values.put("password_ad", password_ad);
+                    tweetsValues[i] = values;
                 }
 			}
 		} catch (JSONException e) {
-			throw new DataException(e.getMessage());
+            //Log.d()
+            throw new DataException(e.getMessage());
 		}
-		
-		context.getContentResolver().delete(Contract.Comps.CONTENT_URI, null, null);
-		context.getContentResolver().bulkInsert(Contract.Comps.CONTENT_URI, tweetsValues);
+
+        if (tweetsValues.length > 0) {
+		    context.getContentResolver().delete(Contract.Comps.CONTENT_URI, null, null);
+		    context.getContentResolver().bulkInsert(Contract.Comps.CONTENT_URI, tweetsValues);
+        }
 		return null;
 	}
 	

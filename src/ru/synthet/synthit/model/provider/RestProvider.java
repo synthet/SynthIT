@@ -54,12 +54,13 @@ public class RestProvider extends ContentProvider {
 
             sql =
                 "create table " + TABLE_COMPS + " (" +
-                    Contract.Users._ID + " integer primary key autoincrement, " +
-                    Contract.Users.UID + " text , " +
-                    Contract.Users.DN + " text, " +
-                    Contract.Users.DISPLAY_NAME + " text, " +
-                    Contract.Users.DESCRIPTION + " text, " +
-                    Contract.Users.PASSWORD + " text" +
+                    Contract.Comps._ID + " integer primary key autoincrement, " +
+                    Contract.Comps.UID + " text , " +
+                    Contract.Comps.DN + " text, " +
+                    Contract.Comps.DISPLAY_NAME + " text, " +
+                    Contract.Comps.DESCRIPTION + " text, " +
+                    Contract.Comps.PASSWORD + " text, " +
+                    Contract.Comps.PASSWORD_AD + " text" +
                 ")";
             db.execSQL(sql);
 		}

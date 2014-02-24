@@ -23,7 +23,7 @@ public final class Contract {
         public static final String DISPLAY_NAME = "displayName";
         public static final String DESCRIPTION = "description";
         public static final String PASSWORD = "password";
-
+        public static final String PASSWORD_AD = "password_ad";
     }
 
 	public static final class Users implements BaseColumns, UsersCoulmns {
