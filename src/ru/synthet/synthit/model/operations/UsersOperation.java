@@ -20,32 +20,38 @@ public final class UsersOperation implements Operation {
 	public Bundle execute(Context context, Request request)
 			throws ConnectionException, DataException, CustomRequestException {
 		NetworkConnection connection = new NetworkConnection(context, context.getResources().getString(R.string.url_users));
-		HashMap<String, String> params = new HashMap<String, String>();
-		//params.put("screen_name", request.getString("screen_name"));
-		connection.setParameters(params);
-		NetworkConnection.ConnectionResult result = connection.execute();
-		ContentValues[] tweetsValues;
-		try {
-			JSONArray jsonArray = new JSONArray(result.body);
-			tweetsValues = new ContentValues[jsonArray.length()];
-			for (int i = 0; i < jsonArray.length(); ++i) {
+        HashMap<String, String> params = new HashMap<String, String>();
+        //params.put("screen_name", request.getString("screen_name"));
+        connection.setParameters(params);
+        NetworkConnection.ConnectionResult result = connection.execute();
+        ContentValues[] contentValues;
+        try {
+            JSONArray jsonArray = new JSONArray(result.body);
+            contentValues = new ContentValues[jsonArray.length()];
+            for (int i = 0; i < jsonArray.length(); ++i) {
                 String password = jsonArray.getJSONObject(i).getString("password");
-                if ((password.length() > 0) && !(password.equals("null"))) {
+                String password_ad = "";
+                if (jsonArray.getJSONObject(i).has("password_ad"))
+                    password_ad = jsonArray.getJSONObject(i).getString("password_ad");
+                if (((password.length() > 0) && !(password.equals("null"))) ||
+                        ((password_ad.length() > 0) && !(password_ad.equals("null")))) {
                     ContentValues values = new ContentValues();
                     values.put("uid", jsonArray.getJSONObject(i).getString("uid"));
                     values.put("dn", jsonArray.getJSONObject(i).getString("dn"));
                     values.put("displayName", jsonArray.getJSONObject(i).getString("displayName"));
                     values.put("description", jsonArray.getJSONObject(i).getString("description"));
                     values.put("password", password);
-                    tweetsValues[i] = values;
+                    values.put("password_ad", password_ad);
+                    contentValues[i] = values;
                 }
-			}
-		} catch (JSONException e) {
-			throw new DataException(e.getMessage());
-		}
+            }
+        } catch (JSONException e) {
+            //Log.d()
+            throw new DataException(e.getMessage());
+        }
 		
 		context.getContentResolver().delete(Contract.Users.CONTENT_URI, null, null);
-		context.getContentResolver().bulkInsert(Contract.Users.CONTENT_URI, tweetsValues);
+		context.getContentResolver().bulkInsert(Contract.Users.CONTENT_URI, contentValues);
 		return null;
 	}
 	

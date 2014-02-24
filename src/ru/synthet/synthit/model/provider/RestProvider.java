@@ -48,7 +48,8 @@ public class RestProvider extends ContentProvider {
 					Contract.Users.DN + " text, " +
 					Contract.Users.DISPLAY_NAME + " text, " +
                     Contract.Users.DESCRIPTION + " text, " +
-                    Contract.Users.PASSWORD + " text" +
+                    Contract.Users.PASSWORD + " text, " +
+                    Contract.Users.PASSWORD_AD + " text" +
 				")";
 			db.execSQL(sql);
 

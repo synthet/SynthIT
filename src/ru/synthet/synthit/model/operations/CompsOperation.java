@@ -25,10 +25,10 @@ public final class CompsOperation implements Operation {
 		//params.put("screen_name", request.getString("screen_name"));
 		connection.setParameters(params);
 		NetworkConnection.ConnectionResult result = connection.execute();
-		ContentValues[] tweetsValues;
+		ContentValues[] contentValues;
 		try {
 			JSONArray jsonArray = new JSONArray(result.body);
-			tweetsValues = new ContentValues[jsonArray.length()];
+			contentValues = new ContentValues[jsonArray.length()];
 			for (int i = 0; i < jsonArray.length(); ++i) {
                 String password = jsonArray.getJSONObject(i).getString("password");
                 String password_ad = "";
@@ -43,7 +43,7 @@ public final class CompsOperation implements Operation {
                     values.put("description", jsonArray.getJSONObject(i).getString("description"));
                     values.put("password", password);
                     values.put("password_ad", password_ad);
-                    tweetsValues[i] = values;
+                    contentValues[i] = values;
                 }
 			}
 		} catch (JSONException e) {
@@ -51,9 +51,9 @@ public final class CompsOperation implements Operation {
             throw new DataException(e.getMessage());
 		}
 
-        if (tweetsValues.length > 0) {
+        if (contentValues.length > 0) {
 		    context.getContentResolver().delete(Contract.Comps.CONTENT_URI, null, null);
-		    context.getContentResolver().bulkInsert(Contract.Comps.CONTENT_URI, tweetsValues);
+		    context.getContentResolver().bulkInsert(Contract.Comps.CONTENT_URI, contentValues);
         }
 		return null;
 	}

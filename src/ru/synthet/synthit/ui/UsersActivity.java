@@ -38,7 +38,8 @@ public class UsersActivity extends FragmentActivity implements AdapterView.OnIte
 		Contract.Users.DN,
         Contract.Users.DISPLAY_NAME,
         Contract.Users.DESCRIPTION,
-        Contract.Users.PASSWORD
+        Contract.Users.PASSWORD,
+        Contract.Users.PASSWORD_AD
 	};
 	
 	private LoaderCallbacks<Cursor> loaderCallbacks = new LoaderCallbacks<Cursor>() {
@@ -153,5 +154,7 @@ public class UsersActivity extends FragmentActivity implements AdapterView.OnIte
         textDesc.setText(cursor.getString(cursor.getColumnIndex(Contract.Users.DESCRIPTION)));
         TextView textPass = (TextView) dialogView.findViewById(R.id.textPass);
         textPass.setText(cursor.getString(cursor.getColumnIndex(Contract.Users.PASSWORD)));
+        TextView textPass2 = (TextView) dialogView.findViewById(R.id.textPass2);
+        textPass2.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.PASSWORD_AD)));
     }
 }
