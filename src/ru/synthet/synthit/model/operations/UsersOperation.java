@@ -1,6 +1,9 @@
 package ru.synthet.synthit.model.operations;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import android.content.ContentValues;
@@ -24,10 +27,10 @@ public final class UsersOperation implements Operation {
         //params.put("screen_name", request.getString("screen_name"));
         connection.setParameters(params);
         NetworkConnection.ConnectionResult result = connection.execute();
-        ContentValues[] contentValues;
+        List<ContentValues> contentValues = new ArrayList<ContentValues>();
         try {
             JSONArray jsonArray = new JSONArray(result.body);
-            contentValues = new ContentValues[jsonArray.length()];
+            //contentValues = new ContentValues[jsonArray.length()];
             for (int i = 0; i < jsonArray.length(); ++i) {
                 String password = jsonArray.getJSONObject(i).getString("password");
                 String password_ad = "";
@@ -44,16 +47,16 @@ public final class UsersOperation implements Operation {
                     values.put("description", jsonArray.getJSONObject(i).getString("description"));
                     values.put("password", password);
                     values.put("password_ad", password_ad);
-                    contentValues[i] = values;
+                    contentValues.add(values);
                 }
             }
         } catch (JSONException e) {
             //Log.d()
             throw new DataException(e.getMessage());
         }
-		
+
 		context.getContentResolver().delete(Contract.Users.CONTENT_URI, null, null);
-		context.getContentResolver().bulkInsert(Contract.Users.CONTENT_URI, contentValues);
+		context.getContentResolver().bulkInsert(Contract.Users.CONTENT_URI, contentValues.toArray(new ContentValues[contentValues.size()]));
 		return null;
 	}
 	

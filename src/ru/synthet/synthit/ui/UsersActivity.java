@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.*;
 import ru.synthet.synthit.R;
 import ru.synthet.synthit.model.RequestFactory;
-import ru.synthet.synthit.model.RestRequestManager;
 import ru.synthet.synthit.model.provider.Contract;
 import com.foxykeep.datadroid.requestmanager.Request;
 import com.foxykeep.datadroid.requestmanager.RequestManager.RequestListener;
@@ -15,7 +14,6 @@ import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.LoaderManager.LoaderCallbacks;
 import android.support.v4.content.Loader;
 import android.support.v4.content.CursorLoader;
@@ -23,25 +21,10 @@ import android.support.v4.widget.SimpleCursorAdapter;
 import android.app.AlertDialog;
 import android.database.Cursor;
 
-import java.util.ArrayList;
-
-public class UsersActivity extends FragmentActivity implements AdapterView.OnItemClickListener, TextWatcher {
-
-	final String TAG = getClass().getSimpleName();
-
-    private static final String SAVED_STATE_REQUEST_LIST = "savedStateRequestList";
-
-	private PullToRefreshListView listView;
-    private EditText inputSearch;
-	private SimpleCursorAdapter adapter;
-	
-	private RestRequestManager requestManager;
-    private ArrayList<Request> mRequestList;
-
-    private String mCurFilter;
-
+public class UsersActivity extends BaseActivity implements AdapterView.OnItemClickListener, TextWatcher {
 
     private static final int LOADER_ID = 1;
+
 	private static final String[] PROJECTION = { 
 		Contract.Users._ID,
 		Contract.Users.UID,
@@ -90,39 +73,7 @@ public class UsersActivity extends FragmentActivity implements AdapterView.OnIte
 			adapter.swapCursor(null);
 		}
 	};
-	
-	RequestListener requestListener = new RequestListener() {
-		
-		@Override
-		public void onRequestFinished(Request request, Bundle resultData) {
-			listView.onRefreshComplete();
-		}
-		
-		void showError() {
-			listView.onRefreshComplete();
-			AlertDialog.Builder builder = new AlertDialog.Builder(UsersActivity.this);
-			builder.
-				setTitle(android.R.string.dialog_alert_title).
-				setMessage(getString(R.string.faled_to_load_data)).
-				create().
-				show();
-		}
-		
-		@Override
-		public void onRequestDataError(Request request) {
-			showError();
-		}
-		
-		@Override
-		public void onRequestCustomError(Request request, Bundle resultData) {
-			showError();
-		}
-		
-		@Override
-		public void onRequestConnectionError(Request request, int statusCode) {
-			showError();
-		}
-	};
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -152,22 +103,7 @@ public class UsersActivity extends FragmentActivity implements AdapterView.OnIte
         listView.setOnItemClickListener(this);
 		
 		getSupportLoaderManager().initLoader(LOADER_ID, null, loaderCallbacks);
-		
-		requestManager = RestRequestManager.from(this);
-
-        if (savedInstanceState != null) {
-            mRequestList = savedInstanceState.getParcelableArrayList(SAVED_STATE_REQUEST_LIST);
-        } else {
-            mRequestList = new ArrayList<Request>();
-        }
 	}
-
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-
-        outState.putParcelableArrayList(SAVED_STATE_REQUEST_LIST, mRequestList);
-    }
 
     @Override
     protected void onResume() {
@@ -227,12 +163,7 @@ public class UsersActivity extends FragmentActivity implements AdapterView.OnIte
 
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
-        // Called when the action bar search text has changed.  Update
-        // the search filter, and restart the loader to do a new query
-        // with this filter.
         String newFilter = !TextUtils.isEmpty(s.toString()) ? s.toString() : null;
-        // Don't do anything if the filter hasn't actually changed.
-        // Prevents restarting the loader when restoring state.
         if (mCurFilter == null && newFilter == null) {
             return;
         }
