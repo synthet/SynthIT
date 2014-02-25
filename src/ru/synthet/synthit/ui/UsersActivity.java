@@ -126,18 +126,7 @@ public class UsersActivity extends FragmentActivity implements AdapterView.OnIte
 			new String[]{ Contract.Users.UID, Contract.Users.DISPLAY_NAME },
 			new int[]{ R.id.user_name_text_view, R.id.body_text_view }, 
 			0);
-        adapter.setFilterQueryProvider(new FilterQueryProvider() {
 
-            public Cursor runQuery(CharSequence constraint) {
-                Cursor mCursor =  getContentResolver().query(Contract.Users.CONTENT_URI,
-                        PROJECTION,
-                        Contract.Users.UID + " LIKE ? OR " + Contract.Users.DISPLAY_NAME_UP + " LIKE ?",
-                        new String[] { constraint.toString()+"%", "%"+constraint.toString().toUpperCase()+"%" },
-                        null);
-                return mCursor;
-            }
-
-        });
 		listView.setAdapter(adapter);
 		listView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
 
@@ -151,6 +140,28 @@ public class UsersActivity extends FragmentActivity implements AdapterView.OnIte
 		getSupportLoaderManager().initLoader(LOADER_ID, null, loaderCallbacks);
 		
 		requestManager = RestRequestManager.from(this);
+
+        adapter.setFilterQueryProvider(new FilterQueryProvider() {
+
+            public Cursor runQuery(CharSequence constraint) {
+                //return null;
+                Cursor mCursor =  managedQuery(Contract.Users.CONTENT_URI,
+                        PROJECTION,
+                        Contract.Users.UID + " LIKE ? OR " + Contract.Users.DISPLAY_NAME_UP + " LIKE ?",
+                        new String[] { constraint.toString()+"%", "%"+constraint.toString().toUpperCase()+"%" },
+                        null);
+                /*
+                Cursor mCursor =  getContentResolver().query(Contract.Users.CONTENT_URI,
+                        PROJECTION,
+                        Contract.Users.UID + " LIKE ? OR " + Contract.Users.DISPLAY_NAME_UP + " LIKE ?",
+                        new String[] { constraint.toString()+"%", "%"+constraint.toString().toUpperCase()+"%" },
+                        null);
+                        */
+                return mCursor;
+
+            }
+
+        });
 
         if (savedInstanceState != null) {
             mRequestList = savedInstanceState.getParcelableArrayList(SAVED_STATE_REQUEST_LIST);
@@ -178,17 +189,6 @@ public class UsersActivity extends FragmentActivity implements AdapterView.OnIte
             } else {
                 mRequestList.remove(request);
                 i--;
-
-                // Get the number of persons in the database
-                int number = adapter.getCursor().getCount();
-
-                if (number < 1) {
-                    // In this case, we don't have a way to know if the request was correctly
-                    // executed with 0 result or if an error occurred. Here I choose to display an
-                    // error but it's up to you
-
-                }
-
                 // Nothing to do if it works as the cursor is automatically updated
             }
         }
@@ -198,7 +198,7 @@ public class UsersActivity extends FragmentActivity implements AdapterView.OnIte
     protected void onPause() {
         super.onPause();
         requestManager.removeRequestListener(requestListener);
-
+        //adapter.getCursor().close();
     }
 
 	void update() {
