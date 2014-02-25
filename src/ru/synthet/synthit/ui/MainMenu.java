@@ -16,8 +16,8 @@ public class MainMenu extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.main_menu);
-        btnUsers =  (Button) findViewById(R.id.buttonUsers);
-        btnComps =  (Button) findViewById(R.id.buttonComps);
+        btnUsers = (Button) findViewById(R.id.buttonUsers);
+        btnComps = (Button) findViewById(R.id.buttonComps);
         btnUsers.setOnClickListener(this);
         btnComps.setOnClickListener(this);
 

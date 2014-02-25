@@ -23,117 +23,117 @@ import ru.synthet.synthit.model.provider.Contract;
 
 public class CompsActivity extends FragmentActivity implements AdapterView.OnItemClickListener {
 
-	final String TAG = getClass().getSimpleName();
+    final String TAG = getClass().getSimpleName();
 
-	private PullToRefreshListView listView;
-	private SimpleCursorAdapter adapter;
-	
-	private RestRequestManager requestManager;
-	
-	private static final int LOADER_ID = 1;
-	private static final String[] PROJECTION = { 
-		Contract.Comps._ID,
-		Contract.Comps.UID,
-		Contract.Comps.DN,
-        Contract.Comps.DISPLAY_NAME,
-        Contract.Comps.DESCRIPTION,
-        Contract.Comps.PASSWORD,
-        Contract.Comps.PASSWORD_AD
-	};
-	
-	private LoaderCallbacks<Cursor> loaderCallbacks = new LoaderCallbacks<Cursor>() {
+    private PullToRefreshListView listView;
+    private SimpleCursorAdapter adapter;
 
-		@Override
-		public Loader<Cursor> onCreateLoader(int loaderId, Bundle arg1) {
-			return new CursorLoader(
-				CompsActivity.this,
-				Contract.Comps.CONTENT_URI,
-				PROJECTION,
-				null,
-				null,
-				null
-			);
-		}
+    private RestRequestManager requestManager;
 
-		@Override
-		public void onLoadFinished(Loader<Cursor> arg0, Cursor cursor) {
-			adapter.swapCursor(cursor);
-			if (cursor.getCount() == 0) {
-				update();
-			}
-		}
+    private static final int LOADER_ID = 1;
+    private static final String[] PROJECTION = {
+            Contract.Comps._ID,
+            Contract.Comps.UID,
+            Contract.Comps.DN,
+            Contract.Comps.DISPLAY_NAME,
+            Contract.Comps.DESCRIPTION,
+            Contract.Comps.PASSWORD,
+            Contract.Comps.PASSWORD_AD
+    };
 
-		@Override
-		public void onLoaderReset(Loader<Cursor> arg0) {
-			adapter.swapCursor(null);
-		}
-	};
-	
-	RequestListener requestListener = new RequestListener() {
-		
-		@Override
-		public void onRequestFinished(Request request, Bundle resultData) {
-			listView.onRefreshComplete();
-		}
-		
-		void showError() {
-			listView.onRefreshComplete();
-			AlertDialog.Builder builder = new AlertDialog.Builder(CompsActivity.this);
-			builder.
-				setTitle(android.R.string.dialog_alert_title).
-				setMessage(getString(R.string.faled_to_load_data)).
-				create().
-				show();
-		}
-		
-		@Override
-		public void onRequestDataError(Request request) {
-			showError();
-		}
-		
-		@Override
-		public void onRequestCustomError(Request request, Bundle resultData) {
-			showError();
-		}
-		
-		@Override
-		public void onRequestConnectionError(Request request, int statusCode) {
-			showError();
-		}
-	};
-	
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		
-		listView = (PullToRefreshListView)findViewById(R.id.listView);
-		adapter = new SimpleCursorAdapter(this,
-			R.layout.tweet_view, 
-			null, 
-			new String[]{ Contract.Comps.UID, Contract.Comps.DISPLAY_NAME },
-			new int[]{ R.id.user_name_text_view, R.id.body_text_view }, 
-			0);
-		listView.setAdapter(adapter);
-		listView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
+    private LoaderCallbacks<Cursor> loaderCallbacks = new LoaderCallbacks<Cursor>() {
 
-			@Override
-			public void onRefresh(PullToRefreshBase<ListView> refreshView) {
-				update();
-			}
-		});
+        @Override
+        public Loader<Cursor> onCreateLoader(int loaderId, Bundle arg1) {
+            return new CursorLoader(
+                    CompsActivity.this,
+                    Contract.Comps.CONTENT_URI,
+                    PROJECTION,
+                    null,
+                    null,
+                    null
+            );
+        }
+
+        @Override
+        public void onLoadFinished(Loader<Cursor> arg0, Cursor cursor) {
+            adapter.swapCursor(cursor);
+            if (cursor.getCount() == 0) {
+                update();
+            }
+        }
+
+        @Override
+        public void onLoaderReset(Loader<Cursor> arg0) {
+            adapter.swapCursor(null);
+        }
+    };
+
+    RequestListener requestListener = new RequestListener() {
+
+        @Override
+        public void onRequestFinished(Request request, Bundle resultData) {
+            listView.onRefreshComplete();
+        }
+
+        void showError() {
+            listView.onRefreshComplete();
+            AlertDialog.Builder builder = new AlertDialog.Builder(CompsActivity.this);
+            builder.
+                    setTitle(android.R.string.dialog_alert_title).
+                    setMessage(getString(R.string.faled_to_load_data)).
+                    create().
+                    show();
+        }
+
+        @Override
+        public void onRequestDataError(Request request) {
+            showError();
+        }
+
+        @Override
+        public void onRequestCustomError(Request request, Bundle resultData) {
+            showError();
+        }
+
+        @Override
+        public void onRequestConnectionError(Request request, int statusCode) {
+            showError();
+        }
+    };
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        listView = (PullToRefreshListView) findViewById(R.id.listView);
+        adapter = new SimpleCursorAdapter(this,
+                R.layout.item_view,
+                null,
+                new String[]{Contract.Comps.UID, Contract.Comps.DISPLAY_NAME},
+                new int[]{R.id.user_name_text_view, R.id.body_text_view},
+                0);
+        listView.setAdapter(adapter);
+        listView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
+
+            @Override
+            public void onRefresh(PullToRefreshBase<ListView> refreshView) {
+                update();
+            }
+        });
         listView.setOnItemClickListener(this);
-		
-		getSupportLoaderManager().initLoader(LOADER_ID, null, loaderCallbacks);
-		
-		requestManager = RestRequestManager.from(this);
-	}
-	
-	void update() {
-		listView.setRefreshing();
-		Request updateRequest = RequestFactory.getCompsRequest();
-		requestManager.execute(updateRequest, requestListener);
-	}
+
+        getSupportLoaderManager().initLoader(LOADER_ID, null, loaderCallbacks);
+
+        requestManager = RestRequestManager.from(this);
+    }
+
+    void update() {
+        listView.setRefreshing();
+        Request updateRequest = RequestFactory.getCompsRequest();
+        requestManager.execute(updateRequest, requestListener);
+    }
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

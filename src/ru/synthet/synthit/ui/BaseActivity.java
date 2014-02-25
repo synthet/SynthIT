@@ -66,20 +66,20 @@ public abstract class BaseActivity extends FragmentActivity implements AdapterVi
         }
     };
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
-		requestManager = RestRequestManager.from(this);
+        requestManager = RestRequestManager.from(this);
 
         if (savedInstanceState != null) {
             mRequestList = savedInstanceState.getParcelableArrayList(SAVED_STATE_REQUEST_LIST);
         } else {
             mRequestList = new ArrayList<Request>();
         }
-	}
+    }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {

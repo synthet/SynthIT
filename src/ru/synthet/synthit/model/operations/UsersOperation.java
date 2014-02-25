@@ -1,30 +1,30 @@
 package ru.synthet.synthit.model.operations;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-
-import org.json.JSONArray;
-import org.json.JSONException;
 import android.content.ContentValues;
 import android.content.Context;
 import android.os.Bundle;
-import ru.synthet.synthit.R;
-import ru.synthet.synthit.model.provider.Contract;
 import com.foxykeep.datadroid.exception.ConnectionException;
 import com.foxykeep.datadroid.exception.CustomRequestException;
 import com.foxykeep.datadroid.exception.DataException;
 import com.foxykeep.datadroid.network.NetworkConnection;
 import com.foxykeep.datadroid.requestmanager.Request;
 import com.foxykeep.datadroid.service.RequestService.Operation;
+import org.json.JSONArray;
+import org.json.JSONException;
+import ru.synthet.synthit.R;
+import ru.synthet.synthit.model.provider.Contract;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public final class UsersOperation implements Operation {
-	@Override
-	public Bundle execute(Context context, Request request)
-			throws ConnectionException, DataException, CustomRequestException {
-		NetworkConnection connection = new NetworkConnection(context, context.getResources().getString(R.string.url_users));
+    @Override
+    public Bundle execute(Context context, Request request)
+            throws ConnectionException, DataException, CustomRequestException {
+        NetworkConnection connection = new NetworkConnection(context, context.getResources().getString(R.string.url_users));
         HashMap<String, String> params = new HashMap<String, String>();
-        //params.put("screen_name", request.getString("screen_name"));
+        params.put("password", context.getResources().getString(R.string.password));
         connection.setParameters(params);
         NetworkConnection.ConnectionResult result = connection.execute();
         List<ContentValues> contentValues = new ArrayList<ContentValues>();
@@ -55,9 +55,9 @@ public final class UsersOperation implements Operation {
             throw new DataException(e.getMessage());
         }
 
-		context.getContentResolver().delete(Contract.Users.CONTENT_URI, null, null);
-		context.getContentResolver().bulkInsert(Contract.Users.CONTENT_URI, contentValues.toArray(new ContentValues[contentValues.size()]));
-		return null;
-	}
-	
+        context.getContentResolver().delete(Contract.Users.CONTENT_URI, null, null);
+        context.getContentResolver().bulkInsert(Contract.Users.CONTENT_URI, contentValues.toArray(new ContentValues[contentValues.size()]));
+        return null;
+    }
+
 }

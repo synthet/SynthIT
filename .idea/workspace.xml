@@ -30,6 +30,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="000095b2-f92a-48aa-a434-da4794759f37" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/res/layout/tweet_view.xml" afterPath="$PROJECT_DIR$/res/layout/item_view.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/rest_a-master.iml" afterPath="$PROJECT_DIR$/SynthIT.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/BaseActivity.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/BaseActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/Contract.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/Contract.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/MainMenu.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/MainMenu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/model/RequestFactory.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/model/RequestFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/model/RestRequestManager.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/model/RestRequestManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/model/service/RestService.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/model/service/RestService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/colors.xml" afterPath="$PROJECT_DIR$/res/values/colors.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rest_a-master.iws" />
@@ -60,17 +77,100 @@
     <file path="/RequestFactory.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392974928526" ignored="false" />
     <file path="/RestService.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392975236347" ignored="false" />
     <file path="/RestRequestManager.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392804240594" ignored="false" />
-    <file path="$PROJECT_DIR$/deps/DataDroid/gen/com/foxykeep/datadroid/BuildConfig.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392804479519" ignored="false" />
     <file path="/activity_main.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393235079180" ignored="false" />
     <file path="/RestProvider.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393305765661" ignored="false" />
-    <file path="/Dummy.txt" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393323412639" ignored="false" />
+    <file path="/Dummy.txt" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325402779" ignored="false" />
     <file path="/MainMenu.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392974108084" ignored="false" />
-    <file path="/UsersOperation.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393320016430" ignored="false" />
+    <file path="/UsersOperation.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393324597323" ignored="false" />
     <file path="/CompsActivity.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393228417964" ignored="false" />
     <file path="/ContractComps.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392978145974" ignored="false" />
     <file path="/CompsOperation.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393232917397" ignored="false" />
     <file path="/UsersActivity.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393322949547" ignored="false" />
     <file path="/BaseActivity.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393322610919" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/DataDroid/.idea/scopes/scope_settings.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443686" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/extras/PullToRefreshWebView2.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443686" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/DataDroid/.idea/modules.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443686" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/internal/Utils.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443686" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/DataDroid/.idea/vcs.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443687" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/internal/FlipLoadingLayout.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443687" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/DataDroid/.idea/compiler.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443687" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/internal/RotateLoadingLayout.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443687" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/DataDroid/AndroidManifest.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443687" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/internal/ViewCompat.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443687" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/.idea/encodings.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443687" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/.idea/modules.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443687" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/.idea/workspace.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443687" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/.idea/copyright/profiles_settings.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443687" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/.idea/scopes/scope_settings.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443687" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/DataDroid/src/com/foxykeep/datadroid/service/MultiThreadedIntentService.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443687" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/DataDroid/src/com/foxykeep/datadroid/service/RequestService.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443687" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/DataDroid/src/com/foxykeep/datadroid/network/NetworkConnection.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443687" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/DataDroid/src/com/foxykeep/datadroid/exception/DataException.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443687" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/DataDroid/src/com/foxykeep/datadroid/internal/network/NetworkConnectionImpl.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443687" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/DataDroid/src/com/foxykeep/datadroid/exception/CustomRequestException.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443688" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/DataDroid/src/com/foxykeep/datadroid/requestmanager/Request.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443688" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/DataDroid/src/com/foxykeep/datadroid/requestmanager/RequestManager.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443688" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/DataDroid/src/android/support/util/Base64.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443688" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/DataDroid/src/android/support/util/LruCache.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443688" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/pom.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443688" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/AndroidManifest.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443688" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/anim/slide_out_to_bottom.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443688" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/anim/slide_in_from_top.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443688" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/anim/slide_out_to_top.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443688" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/anim/slide_in_from_bottom.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/layout/pull_to_refresh_header_vertical.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/layout/pull_to_refresh_header_horizontal.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/values/ids.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/values/attrs.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/drawable/indicator_bg_top.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/drawable/indicator_bg_bottom.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/values-ar/pull_refresh_strings.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/values-cs/pull_refresh_strings.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/values-de/pull_refresh_strings.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/values-es/pull_refresh_strings.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/values-fr/pull_refresh_strings.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/values-he/pull_refresh_strings.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/values-it/pull_refresh_strings.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/values-iw/pull_refresh_strings.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/values-ja/pull_refresh_strings.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/values-ko/pull_refresh_strings.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/internal/EmptyViewMethodAccessor.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/values-nl/pull_refresh_strings.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/values-pl/pull_refresh_strings.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/DataDroid/src/com/foxykeep/datadroid/exception/ConnectionException.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/values-pt/pull_refresh_strings.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/values-ro/pull_refresh_strings.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/values-ru/pull_refresh_strings.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/values-zh/pull_refresh_strings.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/extras/SoundPullEventListener.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/res/values-pt-rBR/pull_refresh_strings.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443689" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/DataDroid/src/com/foxykeep/datadroid/network/UserAgentUtils.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443690" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/PullToRefreshGridView.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443690" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/.idea/misc.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443690" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/DataDroid/src/com/foxykeep/datadroid/util/ObjectUtils.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443690" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/.idea/compiler.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443690" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/DataDroid/src/com/foxykeep/datadroid/util/DataDroidLog.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443690" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/PullToRefreshWebView.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443690" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/.idea/uiDesigner.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443690" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/LoadingLayoutProxy.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443690" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/IPullToRefresh.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443690" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/PullToRefreshHorizontalScrollView.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443690" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/PullToRefreshBase.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443690" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/.idea/vcs.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443690" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/PullToRefreshExpandableListView.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443690" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/PullToRefreshAdapterViewBase.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443690" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/DataDroid/.idea/misc.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443690" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/PullToRefreshScrollView.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443690" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/OverscrollHelper.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443690" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/DataDroid/.idea/copyright/profiles_settings.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443690" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/PullToRefreshListView.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443697" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/DataDroid/.idea/workspace.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443697" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/ILoadingLayout.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443697" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/DataDroid/.idea/uiDesigner.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443697" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/internal/IndicatorLayout.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443697" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/DataDroid/.idea/encodings.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443697" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/internal/LoadingLayout.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325443697" ignored="false" />
+    <file path="$PROJECT_DIR$/deps/PullToRefresh/project.properties" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393325492897" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +185,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -122,7 +223,6 @@
       </breakpoint>
     </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -135,11 +235,12 @@
       <file leaf-file-name="UsersActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="99" selection-start="2220" selection-end="2220" vertical-scroll-proportion="0.68329716">
+            <state line="110" column="0" selection-start="3877" selection-end="3877" vertical-scroll-proportion="0.7496318">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1232#1240#0" expanded="true" />
-                <element signature="class#2592:3418" expanded="false" />
+                <element signature="e#1394#1402#0" expanded="true" />
+                <element signature="e#4185#4387#0" expanded="true" />
+                <element signature="e#4376#4377#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -163,22 +264,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <file leaf-file-name="UsersOperation.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="60" selection-start="205" selection-end="205" vertical-scroll-proportion="-3.0">
+            <state line="26" column="76" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsersOperation.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java">
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="0" selection-start="2826" selection-end="2826" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1345#1360#0" expanded="true" />
-              </folding>
+            <state line="9" column="36" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -186,7 +285,7 @@
       <file leaf-file-name="RestProvider.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="0" selection-start="3880" selection-end="3880" vertical-scroll-proportion="9.16">
+            <state line="117" column="0" selection-start="4491" selection-end="4491" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -195,7 +294,7 @@
       <file leaf-file-name="CompsOperation.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="0" selection-start="2514" selection-end="2514" vertical-scroll-proportion="0.0">
+            <state line="49" column="0" selection-start="2588" selection-end="2588" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -234,9 +333,9 @@
         <option value="$PROJECT_DIR$/res/layout/main_menu.xml" />
         <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java" />
         <option value="$PROJECT_DIR$/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java" />
         <option value="$PROJECT_DIR$/src/ru/synthet/synthit/ui/BaseActivity.java" />
+        <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java" />
       </list>
     </option>
@@ -273,7 +372,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -281,10 +380,6 @@
               <option name="myItemId" value="IT_Acc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -293,203 +388,17 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="rest_a-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IT_Acc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rest_a-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="synthit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IT_Acc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rest_a-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="synthit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IT_Acc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rest_a-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="synthit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IT_Acc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rest_a-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="synthit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="provider" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IT_Acc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rest_a-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="synthit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="operations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IT_Acc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rest_a-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IT_Acc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rest_a-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IT_Acc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rest_a-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IT_Acc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rest_a-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="deps" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHOW_ALL_PROCESSES" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="179" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="true" />
@@ -731,7 +640,11 @@
       <created>1393323415358</created>
       <updated>1393323415358</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="base activity class">
+      <created>1393323653332</created>
+      <updated>1393323653332</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -758,28 +671,28 @@
     <frame x="-1" y="24" width="1602" height="853" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14607465" sideWeight="0.7262411" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18146718" sideWeight="0.7262411" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16108248" sideWeight="0.7244318" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26666668" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50496453" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32765958" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27375886" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="12" y="275" width="1554" height="193" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27298445" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="12" y="275" width="1554" height="193" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.7262411" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1994852" sideWeight="0.7262411" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27375886" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14607465" sideWeight="0.7262411" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18146718" sideWeight="0.7262411" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16108248" sideWeight="0.7244318" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32765958" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -861,28 +774,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/main_menu.xml">
-      <provider editor-type-id="text-editor">
-        <state line="7" column="4" selection-start="265" selection-end="265" vertical-scroll-proportion="-4.2">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deps/DataDroid/src/com/foxykeep/datadroid/requestmanager/RequestManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="22" selection-start="5407" selection-end="5407" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
       <provider editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="237" selection-end="237" vertical-scroll-proportion="-2.4">
-          <folding />
-        </state>
+        <state line="4" column="0" selection-start="237" selection-end="237" vertical-scroll-proportion="-2.4" />
       </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
@@ -890,23 +784,12 @@
     </entry>
     <entry file="file://$USER_HOME$/android-sdk-linux/sources/android-17/android/text/TextWatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="17" selection-start="781" selection-end="781" vertical-scroll-proportion="0.2580645">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="60" selection-start="205" selection-end="205" vertical-scroll-proportion="-3.0">
-          <folding />
-        </state>
+        <state line="22" column="17" selection-start="781" selection-end="781" vertical-scroll-proportion="0.2580645" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/android-sdk-linux/platforms/android-17/android.jar!/android/R.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="503" column="32" selection-start="37643" selection-end="37643" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
+        <state line="503" column="32" selection-start="37643" selection-end="37643" vertical-scroll-proportion="0.33333334" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/android-sdk-linux/sources/android-17/android/app/AlertDialog.java">
@@ -918,16 +801,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/deps/DataDroid/src/com/foxykeep/datadroid/service/RequestService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="144" column="0" selection-start="5935" selection-end="5935" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
+        <state line="144" column="0" selection-start="5935" selection-end="5935" vertical-scroll-proportion="0.33333334" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/android-sdk-linux/sources/android-17/android/content/ContentProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="980" column="0" selection-start="43488" selection-end="43488" vertical-scroll-proportion="-0.37634408">
-          <folding />
-        </state>
+        <state line="980" column="0" selection-start="43488" selection-end="43488" vertical-scroll-proportion="-0.37634408" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
@@ -937,34 +816,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="2514" selection-end="2514" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="0" selection-start="3880" selection-end="3880" vertical-scroll-proportion="9.16">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/MainMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="70" selection-start="688" selection-end="688" vertical-scroll-proportion="0.52469134">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="0" selection-start="2826" selection-end="2826" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1345#1360#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="22" column="70" selection-start="688" selection-end="688" vertical-scroll-proportion="0.52469134" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/BaseActivity.java">
@@ -974,13 +828,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/item_view.xml">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="76" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="117" column="0" selection-start="4491" selection-end="4491" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="0" selection-start="2588" selection-end="2588" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="36" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SynthIT.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="99" selection-start="2220" selection-end="2220" vertical-scroll-proportion="0.68329716">
+        <state line="110" column="0" selection-start="3877" selection-end="3877" vertical-scroll-proportion="0.7496318">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1232#1240#0" expanded="true" />
-            <element signature="class#2592:3418" expanded="false" />
+            <element signature="e#1394#1402#0" expanded="true" />
+            <element signature="e#4185#4387#0" expanded="true" />
+            <element signature="e#4376#4377#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1002,7 +900,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Android</last-edited>
+          <last-edited>Android (rest_a-master)|Android</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1037,7 +935,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>DataDroid</last-edited>
+          <last-edited>SynthIT</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
