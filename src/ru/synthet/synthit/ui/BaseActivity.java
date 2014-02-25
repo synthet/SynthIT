@@ -1,10 +1,11 @@
 package ru.synthet.synthit.ui;
 
 import android.app.AlertDialog;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.SimpleCursorAdapter;
-import android.text.TextWatcher;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -13,10 +14,11 @@ import com.foxykeep.datadroid.requestmanager.RequestManager;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import ru.synthet.synthit.R;
 import ru.synthet.synthit.model.RestRequestManager;
+import ru.synthet.synthit.model.provider.Contract;
 
 import java.util.ArrayList;
 
-public abstract class BaseActivity extends FragmentActivity implements AdapterView.OnItemClickListener, TextWatcher {
+public abstract class BaseActivity extends FragmentActivity implements AdapterView.OnItemClickListener {
 
     private static final String SAVED_STATE_REQUEST_LIST = "savedStateRequestList";
 
@@ -26,6 +28,8 @@ public abstract class BaseActivity extends FragmentActivity implements AdapterVi
 
     protected RestRequestManager requestManager;
     protected ArrayList<Request> mRequestList;
+
+    protected AlertDialog itemDialog;
 
     protected String mCurFilter;
 
@@ -38,7 +42,7 @@ public abstract class BaseActivity extends FragmentActivity implements AdapterVi
 
         void showError() {
             listView.onRefreshComplete();
-            AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
+            AlertDialog.Builder builder = new AlertDialog.Builder(BaseActivity.this);
             builder.
                     setTitle(android.R.string.dialog_alert_title).
                     setMessage(getString(R.string.faled_to_load_data)).
@@ -84,5 +88,47 @@ public abstract class BaseActivity extends FragmentActivity implements AdapterVi
         outState.putParcelableArrayList(SAVED_STATE_REQUEST_LIST, mRequestList);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        for (int i = 0; i < mRequestList.size(); i++) {
+            Request request = mRequestList.get(i);
 
+            if (requestManager.isRequestInProgress(request)) {
+                requestManager.addRequestListener(requestListener, request);
+                setProgressBarIndeterminateVisibility(true);
+            } else {
+                mRequestList.remove(request);
+                i--;
+                // Nothing to do if it works as the cursor is automatically updated
+            }
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        requestManager.removeRequestListener(requestListener);
+        if (itemDialog != null) {
+            if (itemDialog.isShowing())
+                itemDialog.dismiss();
+        }
+    }
+
+    protected abstract void populateDialog(Cursor cursor);
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(BaseActivity.this);
+        Cursor cursor = (Cursor) parent.getAdapter().getItem(position);
+
+        View dialogView = getLayoutInflater().inflate(R.layout.user_dialog, null);
+        itemDialog = builder.setView(dialogView).
+                setTitle(cursor.getString(cursor.getColumnIndex(Contract.Users.UID))).
+                setCancelable(true).
+                create();
+        itemDialog.show();
+
+        populateDialog(cursor);
+    }
 }
