@@ -5,15 +5,12 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <Space
-            android:layout_width="fill_parent"
-            android:layout_height="20px"
-            android:id="@+id/space" android:layout_gravity="center"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/users"
-            android:id="@+id/buttonUsers" android:layout_gravity="center" android:width="250dp"/>
+            android:id="@+id/buttonUsers" android:layout_gravity="center" android:width="250dp"
+            android:layout_marginTop="20dp"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -22,15 +22,20 @@ import android.support.v4.widget.SimpleCursorAdapter;
 import android.app.AlertDialog;
 import android.database.Cursor;
 
+import java.util.ArrayList;
+
 public class UsersActivity extends FragmentActivity implements AdapterView.OnItemClickListener, TextWatcher {
 
 	final String TAG = getClass().getSimpleName();
+
+    private static final String SAVED_STATE_REQUEST_LIST = "savedStateRequestList";
 
 	private PullToRefreshListView listView;
     private EditText inputSearch;
 	private SimpleCursorAdapter adapter;
 	
 	private RestRequestManager requestManager;
+    protected ArrayList<Request> mRequestList;
 	
 	private static final int LOADER_ID = 1;
 	private static final String[] PROJECTION = { 
@@ -108,6 +113,7 @@ public class UsersActivity extends FragmentActivity implements AdapterView.OnIte
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
 		setContentView(R.layout.activity_main);
 
         inputSearch = (EditText) findViewById(R.id.inputSearch);
@@ -126,7 +132,7 @@ public class UsersActivity extends FragmentActivity implements AdapterView.OnIte
                 Cursor mCursor =  getContentResolver().query(Contract.Users.CONTENT_URI,
                         PROJECTION,
                         Contract.Users.UID + " LIKE ? OR " + Contract.Users.DISPLAY_NAME_UP + " LIKE ?",
-                        new String[] { constraint.toString()+"%", constraint.toString().toUpperCase()+"%" },
+                        new String[] { constraint.toString()+"%", "%"+constraint.toString().toUpperCase()+"%" },
                         null);
                 return mCursor;
             }
@@ -145,8 +151,56 @@ public class UsersActivity extends FragmentActivity implements AdapterView.OnIte
 		getSupportLoaderManager().initLoader(LOADER_ID, null, loaderCallbacks);
 		
 		requestManager = RestRequestManager.from(this);
+
+        if (savedInstanceState != null) {
+            mRequestList = savedInstanceState.getParcelableArrayList(SAVED_STATE_REQUEST_LIST);
+        } else {
+            mRequestList = new ArrayList<Request>();
+        }
 	}
-	
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putParcelableArrayList(SAVED_STATE_REQUEST_LIST, mRequestList);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        for (int i = 0; i < mRequestList.size(); i++) {
+            Request request = mRequestList.get(i);
+
+            if (requestManager.isRequestInProgress(request)) {
+                requestManager.addRequestListener(requestListener, request);
+                setProgressBarIndeterminateVisibility(true);
+            } else {
+                mRequestList.remove(request);
+                i--;
+
+                // Get the number of persons in the database
+                int number = adapter.getCursor().getCount();
+
+                if (number < 1) {
+                    // In this case, we don't have a way to know if the request was correctly
+                    // executed with 0 result or if an error occurred. Here I choose to display an
+                    // error but it's up to you
+
+                }
+
+                // Nothing to do if it works as the cursor is automatically updated
+            }
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        requestManager.removeRequestListener(requestListener);
+
+    }
+
 	void update() {
         listView.setRefreshing();
         Request updateRequest = RequestFactory.getUsersRequest();

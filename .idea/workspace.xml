@@ -6,7 +6,7 @@
         <option name="device" value="2.7in QVGA" />
         <option name="deviceConfiguration" value="Portrait" />
         <option name="localeLanguage" value="ru" />
-        <option name="targetHashString" value="android-18" />
+        <option name="targetHashString" value="android-17" />
         <option name="theme" value="AppTheme" />
       </profile>
     </option>
@@ -30,10 +30,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="000095b2-f92a-48aa-a434-da4794759f37" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/Contract.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/Contract.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main_menu.xml" afterPath="$PROJECT_DIR$/res/layout/main_menu.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rest_a-master.iws" />
@@ -67,14 +67,14 @@
     <file path="/RestRequestManager.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392804240594" ignored="false" />
     <file path="$PROJECT_DIR$/deps/DataDroid/gen/com/foxykeep/datadroid/BuildConfig.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392804479519" ignored="false" />
     <file path="/activity_main.xml" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393235079180" ignored="false" />
-    <file path="/RestProvider.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393241474853" ignored="false" />
-    <file path="/Dummy.txt" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393239858815" ignored="false" />
+    <file path="/RestProvider.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393305765661" ignored="false" />
+    <file path="/Dummy.txt" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393305882855" ignored="false" />
     <file path="/MainMenu.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392974108084" ignored="false" />
     <file path="/UsersOperation.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393241496332" ignored="false" />
     <file path="/CompsActivity.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393228417964" ignored="false" />
     <file path="/ContractComps.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1392978145974" ignored="false" />
     <file path="/CompsOperation.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393232917397" ignored="false" />
-    <file path="/UsersActivity.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393241527616" ignored="false" />
+    <file path="/UsersActivity.java" changelist="000095b2-f92a-48aa-a434-da4794759f37" time="1393307290071" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,12 +139,22 @@
       <file leaf-file-name="UsersActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="127" column="91" selection-start="3825" selection-end="3825" vertical-scroll-proportion="0.1659292">
+            <state line="188" column="0" selection-start="5903" selection-end="5903" vertical-scroll-proportion="0.59876543">
               <folding>
-                <element signature="e#1659#1667#0" expanded="true" />
-                <element signature="e#3518#4035#0" expanded="true" />
-                <element signature="e#4023#4024#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1820#1828#0" expanded="true" />
+                <element signature="e#3680#4201#0" expanded="true" />
+                <element signature="e#4189#4190#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainMenu.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/MainMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="34" selection-start="470" selection-end="470" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -163,7 +173,7 @@
       <file leaf-file-name="RestProvider.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="50" selection-start="1707" selection-end="1707" vertical-scroll-proportion="-6.2">
+            <state line="12" column="13" selection-start="416" selection-end="416" vertical-scroll-proportion="-2.4">
               <folding />
             </state>
           </provider>
@@ -172,7 +182,7 @@
       <file leaf-file-name="main_menu.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/main_menu.xml">
           <provider editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="7" column="4" selection-start="265" selection-end="265" vertical-scroll-proportion="-4.2">
               <folding />
             </state>
           </provider>
@@ -184,7 +194,7 @@
       <file leaf-file-name="activity_main.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
           <provider editor-type-id="text-editor">
-            <state line="19" column="8" selection-start="976" selection-end="976" vertical-scroll-proportion="-10.8">
+            <state line="9" column="43" selection-start="464" selection-end="464" vertical-scroll-proportion="-5.4">
               <folding />
             </state>
           </provider>
@@ -196,16 +206,16 @@
       <file leaf-file-name="UsersOperation.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="45" selection-start="2353" selection-end="2353" vertical-scroll-proportion="0.0">
+            <state line="55" column="66" selection-start="2940" selection-end="2940" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RestService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/service/RestService.java">
+      <file leaf-file-name="CompsOperation.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="28" selection-start="548" selection-end="548" vertical-scroll-proportion="0.0">
+            <state line="50" column="0" selection-start="2514" selection-end="2514" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -214,21 +224,9 @@
       <file leaf-file-name="Contract.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/Contract.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="67" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0">
+            <state line="32" column="32" selection-start="1260" selection-end="1260" vertical-scroll-proportion="0.0">
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user_dialog.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/user_dialog.xml">
-          <provider editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
           </provider>
         </entry>
       </file>
@@ -252,7 +250,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/service/RestService.java" />
         <option value="$PROJECT_DIR$/src/ru/synthet/synthit/ui/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/RequestFactory.java" />
@@ -263,10 +260,11 @@
         <option value="$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/user_dialog.xml" />
         <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java" />
-        <option value="$PROJECT_DIR$/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/Contract.java" />
-        <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java" />
         <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java" />
+        <option value="$PROJECT_DIR$/res/layout/main_menu.xml" />
+        <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java" />
+        <option value="$PROJECT_DIR$/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java" />
       </list>
     </option>
@@ -755,7 +753,11 @@
       <created>1393239863779</created>
       <updated>1393239863779</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="UID search">
+      <created>1393242298671</created>
+      <updated>1393242298671</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -780,10 +782,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1602" height="853" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14993565" sideWeight="0.7262411" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18404119" sideWeight="0.7262411" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14800514" sideWeight="0.7262411" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18211068" sideWeight="0.7262411" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16108248" sideWeight="0.7244318" order="4" side_tool="false" content_ui="tabs" />
@@ -795,12 +797,12 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32765958" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2567376" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27375886" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.7432624" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.7262411" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1994852" sideWeight="0.7432624" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1994852" sideWeight="0.7262411" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27375886" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -881,71 +883,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/deps/DataDroid/src/com/foxykeep/datadroid/exception/DataException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="11" selection-start="1355" selection-end="1355" vertical-scroll-proportion="0.30959752">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="964" selection-end="2570" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/user_dialog.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main_menu.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
-      <provider editor-type-id="text-editor">
-        <state line="19" column="8" selection-start="976" selection-end="976" vertical-scroll-proportion="-10.8">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/android-sdk-linux/sources/android-17/android/database/Cursor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="17" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/android-support-v4.jar!/android/support/v4/content/CursorLoader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="11" selection-start="962" selection-end="962" vertical-scroll-proportion="0.33257404">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/RequestFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="26" selection-start="242" selection-end="242" vertical-scroll-proportion="0.28169015">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/PullToRefreshBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="302" column="22" selection-start="8875" selection-end="8875" vertical-scroll-proportion="0.33333334">
@@ -976,34 +913,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/Contract.java">
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="67" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/MainMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="50" selection-start="1707" selection-end="1707" vertical-scroll-proportion="-6.2">
+        <state line="17" column="34" selection-start="470" selection-end="470" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="45" selection-start="2353" selection-end="2353" vertical-scroll-proportion="0.0">
+        <state line="55" column="66" selection-start="2940" selection-end="2940" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/Contract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="32" selection-start="1260" selection-end="1260" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/android-sdk-linux/sources/android-17/android/content/ContentResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1264" column="16" selection-start="54617" selection-end="54617" vertical-scroll-proportion="0.33251232">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/android-sdk-linux/sources/android-17/android/database/sqlite/SQLiteDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1336" column="16" selection-start="58634" selection-end="58634" vertical-scroll-proportion="0.33251232">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="416" selection-end="416" vertical-scroll-proportion="-2.4">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main_menu.xml">
+      <provider editor-type-id="text-editor">
+        <state line="7" column="4" selection-start="265" selection-end="265" vertical-scroll-proportion="-4.2">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
+      <provider editor-type-id="text-editor">
+        <state line="9" column="43" selection-start="464" selection-end="464" vertical-scroll-proportion="-5.4">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="0" selection-start="2514" selection-end="2514" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deps/DataDroid/src/com/foxykeep/datadroid/requestmanager/RequestManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="143" column="22" selection-start="5407" selection-end="5407" vertical-scroll-proportion="0.33333334">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="91" selection-start="3825" selection-end="3825" vertical-scroll-proportion="0.1659292">
+        <state line="188" column="0" selection-start="5903" selection-end="5903" vertical-scroll-proportion="0.59876543">
           <folding>
-            <element signature="e#1659#1667#0" expanded="true" />
-            <element signature="e#3518#4035#0" expanded="true" />
-            <element signature="e#4023#4024#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1820#1828#0" expanded="true" />
+            <element signature="e#3680#4201#0" expanded="true" />
+            <element signature="e#4189#4190#0" expanded="true" />
           </folding>
         </state>
       </provider>

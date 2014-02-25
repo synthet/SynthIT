@@ -5,8 +5,9 @@
 
     <EditText
             android:layout_width="fill_parent"
-            android:layout_height="80dp"
+            android:layout_height="100dp"
             android:id="@+id/inputSearch" android:layout_alignParentLeft="true"
+            android:imeOptions="actionDone"
             android:layout_alignParentTop="true" android:layout_weight="1" android:layout_margin="5dp"
             android:hint="Поиск" android:inputType="textVisiblePassword"/>
     <com.handmark.pulltorefresh.library.PullToRefreshListView

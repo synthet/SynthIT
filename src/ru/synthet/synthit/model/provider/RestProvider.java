@@ -117,10 +117,12 @@ public class RestProvider extends ContentProvider {
 		case PATH_USERS: {
 			mDatabaseHelper.getWritableDatabase().insert(TABLE_USERS, null, values);
 			getContext().getContentResolver().notifyChange(Contract.Users.CONTENT_URI, null);
+            return Contract.Users.CONTENT_URI;
 		}
         case PATH_COMPS: {
             mDatabaseHelper.getWritableDatabase().insert(TABLE_COMPS, null, values);
-            getContext().getContentResolver().notifyChange(Contract.Users.CONTENT_URI, null);
+            getContext().getContentResolver().notifyChange(Contract.Comps.CONTENT_URI, null);
+            return Contract.Comps.CONTENT_URI;
         }
 		default:
 			return null;
