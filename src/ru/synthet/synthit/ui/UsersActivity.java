@@ -1,6 +1,7 @@
 package ru.synthet.synthit.ui;
 
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.*;
@@ -35,9 +36,12 @@ public class UsersActivity extends FragmentActivity implements AdapterView.OnIte
 	private SimpleCursorAdapter adapter;
 	
 	private RestRequestManager requestManager;
-    protected ArrayList<Request> mRequestList;
-	
-	private static final int LOADER_ID = 1;
+    private ArrayList<Request> mRequestList;
+
+    private String mCurFilter;
+
+
+    private static final int LOADER_ID = 1;
 	private static final String[] PROJECTION = { 
 		Contract.Users._ID,
 		Contract.Users.UID,
@@ -53,14 +57,24 @@ public class UsersActivity extends FragmentActivity implements AdapterView.OnIte
 
 		@Override
 		public Loader<Cursor> onCreateLoader(int loaderId, Bundle arg1) {
-			return new CursorLoader(
-				UsersActivity.this,
-				Contract.Users.CONTENT_URI,
-				PROJECTION,
-				null,
-				null,
-				null
-			);
+            if (mCurFilter == null) {
+                return new CursorLoader(
+                    UsersActivity.this,
+                    Contract.Users.CONTENT_URI,
+                    PROJECTION,
+                    null,
+                    null,
+                    null
+                );
+            }  else {
+                return new CursorLoader(
+                    UsersActivity.this,
+                    Contract.Users.CONTENT_URI,
+                    PROJECTION,
+                    Contract.Users.UID + " LIKE ? OR " + Contract.Users.DISPLAY_NAME_UP + " LIKE ?",
+                    new String[] { mCurFilter+"%", "%"+mCurFilter.toUpperCase()+"%" },
+                    null);
+            }
 		}
 
 		@Override
@@ -141,28 +155,6 @@ public class UsersActivity extends FragmentActivity implements AdapterView.OnIte
 		
 		requestManager = RestRequestManager.from(this);
 
-        adapter.setFilterQueryProvider(new FilterQueryProvider() {
-
-            public Cursor runQuery(CharSequence constraint) {
-                //return null;
-                Cursor mCursor =  managedQuery(Contract.Users.CONTENT_URI,
-                        PROJECTION,
-                        Contract.Users.UID + " LIKE ? OR " + Contract.Users.DISPLAY_NAME_UP + " LIKE ?",
-                        new String[] { constraint.toString()+"%", "%"+constraint.toString().toUpperCase()+"%" },
-                        null);
-                /*
-                Cursor mCursor =  getContentResolver().query(Contract.Users.CONTENT_URI,
-                        PROJECTION,
-                        Contract.Users.UID + " LIKE ? OR " + Contract.Users.DISPLAY_NAME_UP + " LIKE ?",
-                        new String[] { constraint.toString()+"%", "%"+constraint.toString().toUpperCase()+"%" },
-                        null);
-                        */
-                return mCursor;
-
-            }
-
-        });
-
         if (savedInstanceState != null) {
             mRequestList = savedInstanceState.getParcelableArrayList(SAVED_STATE_REQUEST_LIST);
         } else {
@@ -198,7 +190,6 @@ public class UsersActivity extends FragmentActivity implements AdapterView.OnIte
     protected void onPause() {
         super.onPause();
         requestManager.removeRequestListener(requestListener);
-        //adapter.getCursor().close();
     }
 
 	void update() {
@@ -236,7 +227,20 @@ public class UsersActivity extends FragmentActivity implements AdapterView.OnIte
 
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
-        this.adapter.getFilter().filter(s);
+        // Called when the action bar search text has changed.  Update
+        // the search filter, and restart the loader to do a new query
+        // with this filter.
+        String newFilter = !TextUtils.isEmpty(s.toString()) ? s.toString() : null;
+        // Don't do anything if the filter hasn't actually changed.
+        // Prevents restarting the loader when restoring state.
+        if (mCurFilter == null && newFilter == null) {
+            return;
+        }
+        if (mCurFilter != null && mCurFilter.equals(newFilter)) {
+            return;
+        }
+        mCurFilter = newFilter;
+        getSupportLoaderManager().restartLoader(LOADER_ID, null, loaderCallbacks);
     }
 
     @Override
