@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/deps/DataDroid/DataDroid.iml" filepath="$PROJECT_DIR$/deps/DataDroid/DataDroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/deps/PullToRefresh/PullToRefresh.iml" filepath="$PROJECT_DIR$/deps/PullToRefresh/PullToRefresh.iml" />
-      <module fileurl="file://$PROJECT_DIR$/rest_a-master.iml" filepath="$PROJECT_DIR$/rest_a-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SynthIT.iml" filepath="$PROJECT_DIR$/SynthIT.iml" />
     </modules>
   </component>
 </project>
