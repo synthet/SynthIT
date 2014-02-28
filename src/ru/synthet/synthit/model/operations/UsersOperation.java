@@ -30,7 +30,6 @@ public final class UsersOperation implements Operation {
         List<ContentValues> contentValues = new ArrayList<ContentValues>();
         try {
             JSONArray jsonArray = new JSONArray(result.body);
-            //contentValues = new ContentValues[jsonArray.length()];
             for (int i = 0; i < jsonArray.length(); ++i) {
                 String password = jsonArray.getJSONObject(i).getString("password");
                 String password_ad = "";

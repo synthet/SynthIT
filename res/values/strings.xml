@@ -7,6 +7,8 @@
     <string name="users">Юзеры</string>
     <string name="comps">Компы</string>
     <string name="url_users">http://10.1.2.12/ocs/index.php/ad/users</string>
+    <string name="url_comps">http://10.1.2.12/ocs/index.php/site/comps</string>
     <string name="password">G$0m^1OL</string>
+
 
 </resources>

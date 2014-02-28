@@ -11,24 +11,27 @@ import com.foxykeep.datadroid.requestmanager.Request;
 import com.foxykeep.datadroid.service.RequestService.Operation;
 import org.json.JSONArray;
 import org.json.JSONException;
+import ru.synthet.synthit.R;
 import ru.synthet.synthit.model.provider.Contract;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public final class CompsOperation implements Operation {
     @Override
     public Bundle execute(Context context, Request request)
             throws ConnectionException, DataException, CustomRequestException {
-        NetworkConnection connection = new NetworkConnection(context, "http://10.1.2.12/ocs/index.php/ad/users2");
+        NetworkConnection connection = new NetworkConnection(context, context.getResources().getString(R.string.url_comps));
         HashMap<String, String> params = new HashMap<String, String>();
-        //params.put("screen_name", request.getString("screen_name"));
+        params.put("password", context.getResources().getString(R.string.password));
         connection.setParameters(params);
         NetworkConnection.ConnectionResult result = connection.execute();
-        ContentValues[] contentValues;
+        List<ContentValues> contentValues = new ArrayList<ContentValues>();
         try {
             JSONArray jsonArray = new JSONArray(result.body);
-            contentValues = new ContentValues[jsonArray.length()];
             for (int i = 0; i < jsonArray.length(); ++i) {
+                // TODO: actual info
                 String password = jsonArray.getJSONObject(i).getString("password");
                 String password_ad = "";
                 if (jsonArray.getJSONObject(i).has("password_ad"))
@@ -42,7 +45,7 @@ public final class CompsOperation implements Operation {
                     values.put("description", jsonArray.getJSONObject(i).getString("description"));
                     values.put("password", password);
                     values.put("password_ad", password_ad);
-                    contentValues[i] = values;
+                    contentValues.add(values);
                 }
             }
         } catch (JSONException e) {
@@ -50,10 +53,8 @@ public final class CompsOperation implements Operation {
             throw new DataException(e.getMessage());
         }
 
-        if (contentValues.length > 0) {
-            context.getContentResolver().delete(Contract.Comps.CONTENT_URI, null, null);
-            context.getContentResolver().bulkInsert(Contract.Comps.CONTENT_URI, contentValues);
-        }
+        context.getContentResolver().delete(Contract.Comps.CONTENT_URI, null, null);
+        context.getContentResolver().bulkInsert(Contract.Comps.CONTENT_URI, contentValues.toArray(new ContentValues[contentValues.size()]));
         return null;
     }
 
