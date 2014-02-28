@@ -57,12 +57,30 @@ public class RestProvider extends ContentProvider {
             sql =
                     "create table " + TABLE_COMPS + " (" +
                             Contract.Comps._ID + " integer primary key autoincrement, " +
-                            Contract.Comps.UID + " text , " +
-                            Contract.Comps.DN + " text, " +
-                            Contract.Comps.DISPLAY_NAME + " text, " +
-                            Contract.Comps.DESCRIPTION + " text, " +
-                            Contract.Comps.PASSWORD + " text, " +
-                            Contract.Comps.PASSWORD_AD + " text" +
+                            Contract.Comps.ID + " integer , " +
+                            Contract.Comps.DEFAULTGATEWAY + " text, " +
+                            Contract.Comps.DESC + " text, " +
+                            Contract.Comps.DNS + " text, " +
+                            Contract.Comps.ID + " text, " +
+                            Contract.Comps.IPADDR + " text, " +
+                            Contract.Comps.IPGATEWAY + " text, " +
+                            Contract.Comps.IPMASK + " text, " +
+                            Contract.Comps.MACADDR + " text, " +
+                            Contract.Comps.MEMORY + " text, " +
+                            Contract.Comps.MEMORYTYPE + " text, " +
+                            Contract.Comps.MEMORYSIZE + " text, " +
+                            Contract.Comps.MEMORYH + " text, " +
+                            Contract.Comps.NAME + " text, " +
+                            Contract.Comps.USERID + " text, " +
+                            Contract.Comps.UID + " text, " +
+                            Contract.Comps.TAG + " text, " +
+                            Contract.Comps.PROCESSORT + " text, " +
+                            Contract.Comps.PROCESSORS + " text, " +
+                            Contract.Comps.PROCESSORN + " text, " +
+                            Contract.Comps.OSNAME + " text, " +
+                            Contract.Comps.OSCOMMENTS + " text, " +
+                            Contract.Comps.OS + " text, " +
+                            Contract.Comps.IPADDR + " text" +
                             ")";
             db.execSQL(sql);
         }
