@@ -34,7 +34,7 @@ public final class CompsOperation implements Operation {
                 // TODO: actual info
                 ContentValues values = new ContentValues();
                 values.put(Contract.Comps.ID, jsonArray.getJSONObject(i).getString("ID"));
-                values.put(Contract.Comps.NAME, jsonArray.getJSONObject(i).getString("NAME"));
+                values.put(Contract.Comps.NAME, jsonArray.getJSONObject(i).getString("NAME").toLowerCase());
                 values.put(Contract.Comps.OSNAME, jsonArray.getJSONObject(i).getString("OSNAME"));
                 values.put(Contract.Comps.OSCOMMENTS, jsonArray.getJSONObject(i).getString("OSCOMMENTS"));
                 values.put(Contract.Comps.PROCESSORT, jsonArray.getJSONObject(i).getString("PROCESSORT"));

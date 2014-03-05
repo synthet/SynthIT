@@ -37,6 +37,12 @@
           <theme>@android:style/Theme.Holo.Light</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/res/layout/main_menu.xml">
+        <config>
+          <device>Nexus 4</device>
+          <theme>@android:style/Theme.Holo.Light</theme>
+        </config>
+      </layout>
     </layouts>
   </component>
   <component name="AndroidLogFilters">
@@ -45,8 +51,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="000095b2-f92a-48aa-a434-da4794759f37" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/BaseActivity.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/BaseActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rest_a-master.iws" />
@@ -116,7 +124,9 @@
         <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/Contract.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="43" column="62" selection-start="830" selection-end="1998" vertical-scroll-proportion="0.0" vertical-offset="274" max-vertical-offset="945">
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,7 +134,7 @@
       <file leaf-file-name="CompsOperation.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="92" selection-start="3840" selection-end="3840" vertical-scroll-proportion="0.0" vertical-offset="53" max-vertical-offset="900">
+            <state line="42" column="120" selection-start="2456" selection-end="2456" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="900">
               <folding>
                 <element signature="e#995#1047#0" expanded="true" />
                 <element signature="e#1153#1204#0" expanded="true" />
@@ -145,13 +155,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompsActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BaseActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/BaseActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="35" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.0" vertical-offset="483" max-vertical-offset="2100">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompsActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="38" selection-start="1928" selection-end="1928" vertical-scroll-proportion="0.7506297" vertical-offset="227" max-vertical-offset="1485">
+            <state line="133" column="54" selection-start="4723" selection-end="4723" vertical-scroll-proportion="0.0" vertical-offset="1518" max-vertical-offset="1995">
               <folding>
-                <element signature="method#onLoadFinished#0;class#1344:2585" expanded="false" />
-                <element signature="class#2865:3691" expanded="false" />
+                <element signature="e#4208#4411#0" expanded="true" />
+                <element signature="e#4400#4401#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -160,7 +181,7 @@
       <file leaf-file-name="UsersActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="39" selection-start="4802" selection-end="4812" vertical-scroll-proportion="-219.0" vertical-offset="687" max-vertical-offset="1365">
+            <state line="91" column="27" selection-start="3303" selection-end="3303" vertical-scroll-proportion="-142.5" vertical-offset="270" max-vertical-offset="1365">
               <folding>
                 <element signature="class#1379:2646" expanded="false" />
                 <element signature="method#onCreateLoader#0;class#1379:2646" expanded="false" />
@@ -169,10 +190,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RestProvider.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="RestProvider.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="54" selection-start="3772" selection-end="3772" vertical-scroll-proportion="0.0" vertical-offset="713" max-vertical-offset="2565">
+            <state line="100" column="136" selection-start="4284" selection-end="4284" vertical-scroll-proportion="-1.3009709" vertical-offset="2050" max-vertical-offset="2565">
               <folding />
             </state>
           </provider>
@@ -205,16 +226,16 @@
         <option value="$PROJECT_DIR$/res/layout/user_dialog.xml" />
         <option value="$PROJECT_DIR$/res/layout/main_menu.xml" />
         <option value="$PROJECT_DIR$/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/src/ru/synthet/synthit/ui/BaseActivity.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/Contract.java" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/PullToRefreshBase.java" />
         <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java" />
-        <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java" />
-        <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java" />
         <option value="$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java" />
+        <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java" />
         <option value="$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java" />
+        <option value="$PROJECT_DIR$/src/ru/synthet/synthit/ui/BaseActivity.java" />
+        <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java" />
       </list>
     </option>
   </component>
@@ -383,6 +404,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SynthIT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rest_a-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -720,7 +759,11 @@
       <created>1394011244913</created>
       <updated>1394011244913</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Comps info&#10;">
+      <created>1394011708552</created>
+      <updated>1394011708552</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -760,7 +803,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.281471" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4002829" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="12" y="275" width="1554" height="193" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23338048" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="12" y="275" width="1554" height="193" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3281471" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.7262411" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -836,14 +879,18 @@
     <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/Contract.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="56" column="72" selection-start="2708" selection-end="2708" vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="960">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/BaseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="53" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="2100">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -929,18 +976,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/PullToRefreshBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1493" column="64" selection-start="50706" selection-end="50706" vertical-scroll-proportion="0.33333334" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/BaseActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="53" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="45" selection-start="498" selection-end="498" vertical-scroll-proportion="0.42857143" vertical-offset="0" max-vertical-offset="350">
@@ -948,26 +983,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="54" selection-start="3772" selection-end="3772" vertical-scroll-proportion="0.0" vertical-offset="713" max-vertical-offset="2565">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/Contract.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="62" selection-start="830" selection-end="1998" vertical-scroll-proportion="0.0" vertical-offset="274" max-vertical-offset="945">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="92" selection-start="3840" selection-end="3840" vertical-scroll-proportion="0.0" vertical-offset="53" max-vertical-offset="900">
           <folding>
-            <element signature="e#995#1047#0" expanded="true" />
-            <element signature="e#1153#1204#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -975,6 +995,23 @@
     <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/RequestFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="26" selection-start="343" selection-end="343" vertical-scroll-proportion="0.4534005" vertical-offset="0" max-vertical-offset="397">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="27" selection-start="3303" selection-end="3303" vertical-scroll-proportion="-142.5" vertical-offset="270" max-vertical-offset="1365">
+          <folding>
+            <element signature="class#1379:2646" expanded="false" />
+            <element signature="method#onCreateLoader#0;class#1379:2646" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/PullToRefreshBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="293" column="22" selection-start="9982" selection-end="9982" vertical-scroll-proportion="0.3324937" vertical-offset="3633" max-vertical-offset="23445">
           <folding />
         </state>
       </provider>
@@ -989,23 +1026,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="39" selection-start="4802" selection-end="4812" vertical-scroll-proportion="-219.0" vertical-offset="687" max-vertical-offset="1365">
+        <state line="133" column="54" selection-start="4723" selection-end="4723" vertical-scroll-proportion="0.0" vertical-offset="1518" max-vertical-offset="1995">
           <folding>
-            <element signature="class#1379:2646" expanded="false" />
-            <element signature="method#onCreateLoader#0;class#1379:2646" expanded="false" />
+            <element signature="e#4208#4411#0" expanded="true" />
+            <element signature="e#4400#4401#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/BaseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="38" selection-start="1928" selection-end="1928" vertical-scroll-proportion="0.7506297" vertical-offset="227" max-vertical-offset="1485">
+        <state line="35" column="35" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.0" vertical-offset="483" max-vertical-offset="2100">
           <folding>
-            <element signature="method#onLoadFinished#0;class#1344:2585" expanded="false" />
-            <element signature="class#2865:3691" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="120" selection-start="2456" selection-end="2456" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="900">
+          <folding>
+            <element signature="e#995#1047#0" expanded="true" />
+            <element signature="e#1153#1204#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main_menu.xml">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="136" selection-start="4284" selection-end="4284" vertical-scroll-proportion="-1.3009709" vertical-offset="2050" max-vertical-offset="2565">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -107,7 +107,7 @@ public class RestProvider extends ContentProvider {
             }
             case PATH_COMPS: {
                 Cursor cursor = mDatabaseHelper.getReadableDatabase().query(TABLE_COMPS, projection, selection, selectionArgs, null, null, sortOrder);
-                cursor.setNotificationUri(getContext().getContentResolver(), Contract.Users.CONTENT_URI);
+                cursor.setNotificationUri(getContext().getContentResolver(), Contract.Comps.CONTENT_URI);
                 return cursor;
             }
             default:

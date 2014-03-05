@@ -31,7 +31,7 @@ public abstract class BaseActivity extends FragmentActivity implements AdapterVi
 
     protected AlertDialog itemDialog;
 
-    protected String mCurFilter;
+    protected String mCurFilter = null;
 
     RequestManager.RequestListener requestListener = new RequestManager.RequestListener() {
 
