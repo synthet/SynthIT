@@ -61,7 +61,6 @@ public class RestProvider extends ContentProvider {
                             Contract.Comps.DEFAULTGATEWAY + " text, " +
                             Contract.Comps.DESC + " text, " +
                             Contract.Comps.DNS + " text, " +
-                            Contract.Comps.ID + " text, " +
                             Contract.Comps.IPADDR + " text, " +
                             Contract.Comps.IPGATEWAY + " text, " +
                             Contract.Comps.IPMASK + " text, " +
@@ -79,8 +78,7 @@ public class RestProvider extends ContentProvider {
                             Contract.Comps.PROCESSORN + " text, " +
                             Contract.Comps.OSNAME + " text, " +
                             Contract.Comps.OSCOMMENTS + " text, " +
-                            Contract.Comps.OS + " text, " +
-                            Contract.Comps.IPADDR + " text" +
+                            Contract.Comps.OS + " text " +
                             ")";
             db.execSQL(sql);
         }

@@ -34,11 +34,12 @@ public class CompsActivity extends FragmentActivity implements AdapterView.OnIte
     private static final String[] PROJECTION = {
             Contract.Comps._ID,
             Contract.Comps.UID,
-            Contract.Comps.DN,
-            Contract.Comps.DISPLAY_NAME,
-            Contract.Comps.DESCRIPTION,
-            Contract.Comps.PASSWORD,
-            Contract.Comps.PASSWORD_AD
+            Contract.Comps.IPADDR,
+            Contract.Comps.ID,
+            Contract.Comps.OS,
+            Contract.Comps.MACADDR,
+            Contract.Comps.TAG,
+            Contract.Comps.NAME
     };
 
     private LoaderCallbacks<Cursor> loaderCallbacks = new LoaderCallbacks<Cursor>() {
@@ -111,7 +112,7 @@ public class CompsActivity extends FragmentActivity implements AdapterView.OnIte
         adapter = new SimpleCursorAdapter(this,
                 R.layout.item_view,
                 null,
-                new String[]{Contract.Comps.UID, Contract.Comps.DISPLAY_NAME},
+                new String[]{Contract.Comps.UID, Contract.Comps.NAME},
                 new int[]{R.id.user_name_text_view, R.id.body_text_view},
                 0);
         listView.setAdapter(adapter);
@@ -148,12 +149,12 @@ public class CompsActivity extends FragmentActivity implements AdapterView.OnIte
                 show();
 
         TextView textUser = (TextView) dialogView.findViewById(R.id.textUser);
-        textUser.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.DISPLAY_NAME)));
+        textUser.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.NAME)));
         TextView textDesc = (TextView) dialogView.findViewById(R.id.textDesc);
-        textDesc.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.DESCRIPTION)));
+        textDesc.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.UID)));
         TextView textPass = (TextView) dialogView.findViewById(R.id.textPass);
-        textPass.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.PASSWORD)));
+        textPass.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.IPADDR)));
         TextView textPass2 = (TextView) dialogView.findViewById(R.id.textPass2);
-        textPass2.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.PASSWORD_AD)));
+        textPass2.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.TAG)));
     }
 }

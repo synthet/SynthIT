@@ -31,21 +31,21 @@ public final class UsersOperation implements Operation {
         try {
             JSONArray jsonArray = new JSONArray(result.body);
             for (int i = 0; i < jsonArray.length(); ++i) {
-                String password = jsonArray.getJSONObject(i).getString("password");
+                String password = jsonArray.getJSONObject(i).getString(Contract.Users.PASSWORD);
                 String password_ad = "";
-                if (jsonArray.getJSONObject(i).has("password_ad"))
-                    password_ad = jsonArray.getJSONObject(i).getString("password_ad");
+                if (jsonArray.getJSONObject(i).has(Contract.Users.PASSWORD_AD))
+                    password_ad = jsonArray.getJSONObject(i).getString(Contract.Users.PASSWORD_AD);
                 if (((password.length() > 0) && !(password.equals("null"))) ||
                         ((password_ad.length() > 0) && !(password_ad.equals("null")))) {
                     ContentValues values = new ContentValues();
-                    values.put("uid", jsonArray.getJSONObject(i).getString("uid"));
-                    values.put("dn", jsonArray.getJSONObject(i).getString("dn"));
-                    String displayName = jsonArray.getJSONObject(i).getString("displayName");
-                    values.put("displayName", displayName);
-                    values.put("displayNameUp", displayName.toUpperCase());
-                    values.put("description", jsonArray.getJSONObject(i).getString("description"));
-                    values.put("password", password);
-                    values.put("password_ad", password_ad);
+                    values.put(Contract.Users.UID, jsonArray.getJSONObject(i).getString(Contract.Users.UID));
+                    values.put(Contract.Users.DN, jsonArray.getJSONObject(i).getString(Contract.Users.DN));
+                    String displayName = jsonArray.getJSONObject(i).getString(Contract.Users.DISPLAY_NAME);
+                    values.put(Contract.Users.DISPLAY_NAME, displayName);
+                    values.put(Contract.Users.DISPLAY_NAME_UP, displayName.toUpperCase());
+                    values.put(Contract.Users.DESCRIPTION, jsonArray.getJSONObject(i).getString(Contract.Users.DESCRIPTION));
+                    values.put(Contract.Users.PASSWORD, password);
+                    values.put(Contract.Users.PASSWORD_AD, password_ad);
                     contentValues.add(values);
                 }
             }

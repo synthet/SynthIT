@@ -32,21 +32,30 @@ public final class CompsOperation implements Operation {
             JSONArray jsonArray = new JSONArray(result.body);
             for (int i = 0; i < jsonArray.length(); ++i) {
                 // TODO: actual info
-                String password = jsonArray.getJSONObject(i).getString("password");
-                String password_ad = "";
-                if (jsonArray.getJSONObject(i).has("password_ad"))
-                    password_ad = jsonArray.getJSONObject(i).getString("password_ad");
-                if (((password.length() > 0) && !(password.equals("null"))) ||
-                        ((password_ad.length() > 0) && !(password_ad.equals("null")))) {
-                    ContentValues values = new ContentValues();
-                    values.put("uid", jsonArray.getJSONObject(i).getString("uid"));
-                    values.put("dn", jsonArray.getJSONObject(i).getString("dn"));
-                    values.put("displayName", jsonArray.getJSONObject(i).getString("displayName"));
-                    values.put("description", jsonArray.getJSONObject(i).getString("description"));
-                    values.put("password", password);
-                    values.put("password_ad", password_ad);
-                    contentValues.add(values);
-                }
+                ContentValues values = new ContentValues();
+                values.put(Contract.Comps.ID, jsonArray.getJSONObject(i).getString("ID"));
+                values.put(Contract.Comps.NAME, jsonArray.getJSONObject(i).getString("NAME"));
+                values.put(Contract.Comps.OSNAME, jsonArray.getJSONObject(i).getString("OSNAME"));
+                values.put(Contract.Comps.OSCOMMENTS, jsonArray.getJSONObject(i).getString("OSCOMMENTS"));
+                values.put(Contract.Comps.PROCESSORT, jsonArray.getJSONObject(i).getString("PROCESSORT"));
+                values.put(Contract.Comps.PROCESSORS, jsonArray.getJSONObject(i).getString("PROCESSORS"));
+                values.put(Contract.Comps.PROCESSORN, jsonArray.getJSONObject(i).getString("PROCESSORN"));
+                values.put(Contract.Comps.MEMORY, jsonArray.getJSONObject(i).getString("MEMORY"));
+                values.put(Contract.Comps.IPADDR, jsonArray.getJSONObject(i).getString("IPADDR"));
+                values.put(Contract.Comps.DNS, jsonArray.getJSONObject(i).getString("DNS"));
+                values.put(Contract.Comps.DEFAULTGATEWAY, jsonArray.getJSONObject(i).getString("DEFAULTGATEWAY"));
+                values.put(Contract.Comps.USERID, jsonArray.getJSONObject(i).getString("USERID"));
+                values.put(Contract.Comps.MACADDR, jsonArray.getJSONObject(i).getString("MACADDR"));
+                values.put(Contract.Comps.IPGATEWAY, jsonArray.getJSONObject(i).getString("IPGATEWAY"));
+                values.put(Contract.Comps.IPMASK, jsonArray.getJSONObject(i).getString("IPMASK"));
+                values.put(Contract.Comps.TAG, jsonArray.getJSONObject(i).getString("TAG"));
+                values.put(Contract.Comps.MEMORYTYPE, jsonArray.getJSONObject(i).getString("MEMORYTYPE"));
+                values.put(Contract.Comps.MEMORYSIZE, jsonArray.getJSONObject(i).getString("MEMORYSIZE"));
+                values.put(Contract.Comps.MEMORYH, jsonArray.getJSONObject(i).getString("MEMORYH"));
+                values.put(Contract.Comps.DESC, jsonArray.getJSONObject(i).getString("DESC"));
+                values.put(Contract.Comps.OS, jsonArray.getJSONObject(i).getString("OS"));
+                values.put(Contract.Comps.UID, jsonArray.getJSONObject(i).getString("UID"));
+                contentValues.add(values);
             }
         } catch (JSONException e) {
             //Log.d()

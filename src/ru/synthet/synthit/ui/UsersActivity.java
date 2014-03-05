@@ -140,6 +140,6 @@ public class UsersActivity extends BaseActivity implements AdapterView.OnItemCli
         TextView textPass = (TextView) itemDialog.findViewById(R.id.textPass);
         textPass.setText(cursor.getString(cursor.getColumnIndex(Contract.Users.PASSWORD)));
         TextView textPass2 = (TextView) itemDialog.findViewById(R.id.textPass2);
-        textPass2.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.PASSWORD_AD)));
+        textPass2.setText(cursor.getString(cursor.getColumnIndex(Contract.Users.PASSWORD_AD)));
     }
 }
