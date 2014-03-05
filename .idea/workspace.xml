@@ -46,10 +46,7 @@
   <component name="ChangeListManager">
     <list default="true" id="000095b2-f92a-48aa-a434-da4794759f37" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rest_a-master.iws" />
@@ -151,9 +148,10 @@
       <file leaf-file-name="CompsActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="36" selection-start="1620" selection-end="1620" vertical-scroll-proportion="0.5514706" vertical-offset="0" max-vertical-offset="2115">
+            <state line="53" column="38" selection-start="1928" selection-end="1928" vertical-scroll-proportion="0.7506297" vertical-offset="227" max-vertical-offset="1485">
               <folding>
-                <element signature="e#2863#2901#0" expanded="true" />
+                <element signature="method#onLoadFinished#0;class#1344:2585" expanded="false" />
+                <element signature="class#2865:3691" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -162,8 +160,11 @@
       <file leaf-file-name="UsersActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="0" selection-start="4108" selection-end="4108" vertical-scroll-proportion="-727.5" vertical-offset="0" max-vertical-offset="1920">
-              <folding />
+            <state line="134" column="39" selection-start="4802" selection-end="4812" vertical-scroll-proportion="-219.0" vertical-offset="687" max-vertical-offset="1365">
+              <folding>
+                <element signature="class#1379:2646" expanded="false" />
+                <element signature="method#onCreateLoader#0;class#1379:2646" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -210,10 +211,10 @@
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/deps/PullToRefresh/src/com/handmark/pulltorefresh/library/PullToRefreshBase.java" />
         <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java" />
-        <option value="$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java" />
-        <option value="$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java" />
         <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java" />
         <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java" />
+        <option value="$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java" />
+        <option value="$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java" />
       </list>
     </option>
   </component>
@@ -715,7 +716,11 @@
       <created>1393587914326</created>
       <updated>1393587914326</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Comps info&#10;">
+      <created>1394011244913</created>
+      <updated>1394011244913</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -755,7 +760,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.281471" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4002829" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="12" y="275" width="1554" height="193" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4002829" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="12" y="275" width="1554" height="193" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3281471" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.7262411" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -796,7 +801,8 @@
     <MESSAGE value="rename project" />
     <MESSAGE value="Comps table" />
     <MESSAGE value="Comps table&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comps table&#10;" />
+    <MESSAGE value="Comps info&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comps info&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -813,7 +819,10 @@
     <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="110" column="0" selection-start="3877" selection-end="3877" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2265">
-          <folding />
+          <folding>
+            <element signature="class#1379:2646" expanded="false" />
+            <element signature="method#onCreateLoader#0;class#1379:2646" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -982,16 +991,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="0" selection-start="4108" selection-end="4108" vertical-scroll-proportion="-727.5" vertical-offset="0" max-vertical-offset="1920">
-          <folding />
+        <state line="134" column="39" selection-start="4802" selection-end="4812" vertical-scroll-proportion="-219.0" vertical-offset="687" max-vertical-offset="1365">
+          <folding>
+            <element signature="class#1379:2646" expanded="false" />
+            <element signature="method#onCreateLoader#0;class#1379:2646" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="36" selection-start="1620" selection-end="1620" vertical-scroll-proportion="0.5514706" vertical-offset="0" max-vertical-offset="2115">
+        <state line="53" column="38" selection-start="1928" selection-end="1928" vertical-scroll-proportion="0.7506297" vertical-offset="227" max-vertical-offset="1485">
           <folding>
-            <element signature="e#2863#2901#0" expanded="true" />
+            <element signature="method#onLoadFinished#0;class#1344:2585" expanded="false" />
+            <element signature="class#2865:3691" expanded="false" />
           </folding>
         </state>
       </provider>

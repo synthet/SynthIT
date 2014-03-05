@@ -73,7 +73,6 @@ public class UsersActivity extends BaseActivity implements AdapterView.OnItemCli
         }
     };
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

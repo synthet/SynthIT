@@ -1,36 +1,29 @@
 package ru.synthet.synthit.ui;
 
-import android.app.AlertDialog;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.LoaderManager.LoaderCallbacks;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
 import android.support.v4.widget.SimpleCursorAdapter;
-import android.view.View;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import com.foxykeep.datadroid.requestmanager.Request;
-import com.foxykeep.datadroid.requestmanager.RequestManager.RequestListener;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import ru.synthet.synthit.R;
 import ru.synthet.synthit.model.RequestFactory;
-import ru.synthet.synthit.model.RestRequestManager;
 import ru.synthet.synthit.model.provider.Contract;
 
-public class CompsActivity extends FragmentActivity implements AdapterView.OnItemClickListener {
+public class CompsActivity extends BaseActivity implements AdapterView.OnItemClickListener {
 
-    final String TAG = getClass().getSimpleName();
+    private static final int LOADER_ID = 2;
 
-    private PullToRefreshListView listView;
-    private SimpleCursorAdapter adapter;
-
-    private RestRequestManager requestManager;
-
-    private static final int LOADER_ID = 1;
     private static final String[] PROJECTION = {
             Contract.Comps._ID,
             Contract.Comps.UID,
@@ -46,20 +39,30 @@ public class CompsActivity extends FragmentActivity implements AdapterView.OnIte
 
         @Override
         public Loader<Cursor> onCreateLoader(int loaderId, Bundle arg1) {
-            return new CursorLoader(
-                    CompsActivity.this,
-                    Contract.Comps.CONTENT_URI,
-                    PROJECTION,
-                    null,
-                    null,
-                    null
-            );
+            if (mCurFilter == null) {
+                return new CursorLoader(
+                        CompsActivity.this,
+                        Contract.Comps.CONTENT_URI,
+                        PROJECTION,
+                        null,
+                        null,
+                        null
+                );
+            } else {
+                return new CursorLoader(
+                        CompsActivity.this,
+                        Contract.Comps.CONTENT_URI,
+                        PROJECTION,
+                        Contract.Comps.UID + " LIKE ? OR " + Contract.Comps.NAME+ " LIKE ?",
+                        new String[]{mCurFilter + "%", "%" + mCurFilter + "%"},
+                        null);
+            }
         }
 
         @Override
         public void onLoadFinished(Loader<Cursor> arg0, Cursor cursor) {
             adapter.swapCursor(cursor);
-            if (cursor.getCount() == 0) {
+            if ((cursor.getCount() == 0) && (mCurFilter == null)) {
                 update();
             }
         }
@@ -70,51 +73,46 @@ public class CompsActivity extends FragmentActivity implements AdapterView.OnIte
         }
     };
 
-    RequestListener requestListener = new RequestListener() {
-
-        @Override
-        public void onRequestFinished(Request request, Bundle resultData) {
-            listView.onRefreshComplete();
-        }
-
-        void showError() {
-            listView.onRefreshComplete();
-            AlertDialog.Builder builder = new AlertDialog.Builder(CompsActivity.this);
-            builder.
-                    setTitle(android.R.string.dialog_alert_title).
-                    setMessage(getString(R.string.faled_to_load_data)).
-                    create().
-                    show();
-        }
-
-        @Override
-        public void onRequestDataError(Request request) {
-            showError();
-        }
-
-        @Override
-        public void onRequestCustomError(Request request, Bundle resultData) {
-            showError();
-        }
-
-        @Override
-        public void onRequestConnectionError(Request request, int statusCode) {
-            showError();
-        }
-    };
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
+
+        inputSearch = (EditText) findViewById(R.id.inputSearch);
+        inputSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String newFilter = !TextUtils.isEmpty(s.toString()) ? s.toString() : null;
+                if (mCurFilter == null && newFilter == null) {
+                    return;
+                }
+                if (mCurFilter != null && mCurFilter.equals(newFilter)) {
+                    return;
+                }
+                mCurFilter = newFilter;
+                getSupportLoaderManager().restartLoader(LOADER_ID, null, loaderCallbacks);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
 
         listView = (PullToRefreshListView) findViewById(R.id.listView);
         adapter = new SimpleCursorAdapter(this,
                 R.layout.item_view,
                 null,
-                new String[]{Contract.Comps.UID, Contract.Comps.NAME},
+                new String[]{Contract.Comps.NAME, Contract.Comps.UID},
                 new int[]{R.id.user_name_text_view, R.id.body_text_view},
                 0);
+
         listView.setAdapter(adapter);
         listView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
 
@@ -126,8 +124,6 @@ public class CompsActivity extends FragmentActivity implements AdapterView.OnIte
         listView.setOnItemClickListener(this);
 
         getSupportLoaderManager().initLoader(LOADER_ID, null, loaderCallbacks);
-
-        requestManager = RestRequestManager.from(this);
     }
 
     void update() {
@@ -136,25 +132,14 @@ public class CompsActivity extends FragmentActivity implements AdapterView.OnIte
         requestManager.execute(updateRequest, requestListener);
     }
 
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(CompsActivity.this);
-        Cursor cursor = (Cursor) parent.getAdapter().getItem(position);
-
-        View dialogView = getLayoutInflater().inflate(R.layout.user_dialog, null);
-        builder.setView(dialogView).
-                setTitle(cursor.getString(cursor.getColumnIndex(Contract.Comps.UID))).
-                setCancelable(true).
-                create().
-                show();
-
-        TextView textUser = (TextView) dialogView.findViewById(R.id.textUser);
+    public void populateDialog(Cursor cursor) {
+        TextView textUser = (TextView) itemDialog.findViewById(R.id.textUser);
         textUser.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.NAME)));
-        TextView textDesc = (TextView) dialogView.findViewById(R.id.textDesc);
+        TextView textDesc = (TextView) itemDialog.findViewById(R.id.textDesc);
         textDesc.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.UID)));
-        TextView textPass = (TextView) dialogView.findViewById(R.id.textPass);
+        TextView textPass = (TextView) itemDialog.findViewById(R.id.textPass);
         textPass.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.IPADDR)));
-        TextView textPass2 = (TextView) dialogView.findViewById(R.id.textPass2);
+        TextView textPass2 = (TextView) itemDialog.findViewById(R.id.textPass2);
         textPass2.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.TAG)));
     }
 }
