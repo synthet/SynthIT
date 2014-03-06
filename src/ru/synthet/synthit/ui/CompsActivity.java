@@ -1,6 +1,6 @@
 package ru.synthet.synthit.ui;
 
-import android.app.AlertDialog;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.LoaderManager.LoaderCallbacks;
@@ -10,12 +10,11 @@ import android.support.v4.widget.SimpleCursorAdapter;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 import com.foxykeep.datadroid.requestmanager.Request;
-import com.foxykeep.datadroid.requestmanager.RequestManager;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import ru.synthet.synthit.R;
@@ -55,8 +54,16 @@ public class CompsActivity extends BaseActivity implements AdapterView.OnItemCli
                         CompsActivity.this,
                         Contract.Comps.CONTENT_URI,
                         PROJECTION,
-                        Contract.Comps.UID + " LIKE ? OR " + Contract.Comps.NAME+ " LIKE ?",
-                        new String[]{mCurFilter + "%", "%" + mCurFilter + "%"},
+                        Contract.Comps.UID + " LIKE ? OR " +
+                                Contract.Comps.NAME + " LIKE ? OR " +
+                                Contract.Comps.IPADDR + " LIKE ? OR " +
+                                Contract.Comps.TAG + " LIKE ?",
+                        new String[]{
+                                mCurFilter + "%",
+                                "%" + mCurFilter + "%",
+                                mCurFilter + "%",
+                                mCurFilter + "%"
+                        },
                         null);
             }
         }
@@ -135,13 +142,15 @@ public class CompsActivity extends BaseActivity implements AdapterView.OnItemCli
     }
 
     public void populateDialog(Cursor cursor) {
-        TextView textUser = (TextView) itemDialog.findViewById(R.id.textUser);
-        textUser.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.NAME)));
-        TextView textDesc = (TextView) itemDialog.findViewById(R.id.textDesc);
-        textDesc.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.UID)));
-        TextView textPass = (TextView) itemDialog.findViewById(R.id.textPass);
-        textPass.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.IPADDR)));
-        TextView textPass2 = (TextView) itemDialog.findViewById(R.id.textPass2);
-        textPass2.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.TAG)));
+        Intent myIntent;
+        myIntent = new Intent(CompsActivity.this, CompView.class);
+        myIntent.putExtra("Comp_ID", cursor.getInt(cursor.getColumnIndex(Contract.Comps._ID)));
+        CompsActivity.this.startActivity(myIntent);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Cursor cursor = (Cursor) parent.getAdapter().getItem(position);
+        populateDialog(cursor);
     }
 }
