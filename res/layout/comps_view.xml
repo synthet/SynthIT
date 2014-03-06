@@ -31,4 +31,34 @@
                   android:id="@+id/textPass2" android:layout_gravity="left|center_vertical" android:layout_margin="10dp"
                   android:textStyle="bold" android:textColor="@color/dialogBlueHolo" android:layout_weight="1"/>
     </LinearLayout>
+
+    <TableLayout android:background="#000000"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content">
+        <TableRow android:background="#FFFFFF"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="1dp">
+            <TextView android:padding="5dp" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:text="TextView">
+
+            </TextView>
+            <TextView android:padding="5dp" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:text="TextView">
+
+            </TextView>
+
+        </TableRow>
+        <TableRow android:background="#FFFFFF"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="1dp">
+            <TextView android:padding="5dp" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:text="TextView">
+
+            </TextView>
+            <TextView android:padding="5dp" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:text="TextView">
+
+            </TextView>
+
+        </TableRow>
+    </TableLayout>
+
 </LinearLayout>

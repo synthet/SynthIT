@@ -32,8 +32,13 @@ public class CompView extends FragmentActivity {
 
         @Override
         public void onLoadFinished(Loader<Cursor> cursorLoader, Cursor cursor) {
-            TextView textUser = (TextView) findViewById(R.id.textUser);
-            textUser.setText(cursor.getString(cursor.getColumnIndex(Contract.Users.DISPLAY_NAME)));
+            Integer count = cursor.getCount();
+            if (count == 1) {
+                cursor.moveToFirst();
+                TextView textUser = (TextView) findViewById(R.id.textUser);
+                textUser.setText(cursor.getString(cursor.getColumnIndex(Contract.Comps.NAME)));
+            }
+            //cursor.close();
         }
 
         @Override
