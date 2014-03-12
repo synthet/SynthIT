@@ -30,8 +30,6 @@ public class CompsActivity extends BaseActivity implements AdapterView.OnItemCli
             Contract.Comps.UID,
             Contract.Comps.IPADDR,
             Contract.Comps.ID,
-            Contract.Comps.OS,
-            Contract.Comps.MACADDR,
             Contract.Comps.TAG,
             Contract.Comps.NAME
     };

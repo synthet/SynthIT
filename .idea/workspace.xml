@@ -32,6 +32,13 @@
           <theme>@android:style/Theme.Holo.Light</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/res/layout/comps_row.xml">
+        <config>
+          <device>Nexus 4</device>
+          <state>Landscape</state>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/res/layout/comps_view.xml">
         <config>
           <device>Nexus 5</device>
@@ -52,9 +59,12 @@
     <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="000095b2-f92a-48aa-a434-da4794759f37" name="Default" comment="CompView&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/cell_shape.xml" />
+    <list default="true" id="000095b2-f92a-48aa-a434-da4794759f37" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/model/CompsArrayProvider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/comps_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompView.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java" afterPath="$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/comps_view.xml" afterPath="$PROJECT_DIR$/res/layout/comps_view.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -124,10 +134,8 @@
       <file leaf-file-name="BaseActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/BaseActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="34" selection-start="1001" selection-end="1001" vertical-scroll-proportion="0.0" vertical-offset="1648" max-vertical-offset="2100">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="26" column="4" selection-start="971" selection-end="1009" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1860">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -135,18 +143,16 @@
       <file leaf-file-name="CompsActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="948" selection-end="991" vertical-scroll-proportion="20.518518" vertical-offset="929" max-vertical-offset="2340">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="27" column="0" selection-start="993" selection-end="1242" vertical-scroll-proportion="0.0" vertical-offset="1170" max-vertical-offset="2025">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="comps_view.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="comps_view.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/comps_view.xml">
           <provider editor-type-id="text-editor">
-            <state line="60" column="19" selection-start="3455" selection-end="3455" vertical-scroll-proportion="0.0" vertical-offset="712" max-vertical-offset="1035">
+            <state line="7" column="4" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="255">
               <folding />
             </state>
           </provider>
@@ -155,65 +161,73 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="comps_row.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/comps_row.xml">
+          <provider editor-type-id="text-editor">
+            <state line="15" column="14" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_dialog.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/user_dialog.xml">
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="32" selection-start="179" selection-end="179" vertical-scroll-proportion="0.114795916" vertical-offset="0" max-vertical-offset="855">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="UsersActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="0" selection-start="4763" selection-end="4937" vertical-scroll-proportion="0.0" vertical-offset="1093" max-vertical-offset="2175">
+            <state line="134" column="0" selection-start="4763" selection-end="4937" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1905">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompsOperation.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="98" selection-start="2456" selection-end="2456" vertical-scroll-proportion="0.0" vertical-offset="394" max-vertical-offset="900">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UsersOperation.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="73" selection-start="1900" selection-end="1925" vertical-scroll-proportion="0.0" vertical-offset="118" max-vertical-offset="780">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompsArrayProvider.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/CompsArrayProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="80" selection-start="1616" selection-end="1616" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainMenu.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/MainMenu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="50" selection-start="742" selection-end="1011" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CompView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="14" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.0" vertical-offset="362" max-vertical-offset="1020">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="60" selection-start="981" selection-end="981" vertical-scroll-proportion="0.0" vertical-offset="193" max-vertical-offset="855">
-              <folding>
-                <element signature="e#513#531#0" expanded="true" />
-                <element signature="e#706#724#0" expanded="true" />
-                <element signature="e#862#880#0" expanded="true" />
-                <element signature="e#1013#1031#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RestProvider.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="67" selection-start="4284" selection-end="4284" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2565">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Contract.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/Contract.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="19" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="945">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -253,18 +267,21 @@
         <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java" />
         <option value="$PROJECT_DIR$/src/ru/synthet/synthit/ui/BaseActivity.java" />
         <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java" />
-        <option value="$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/drawable/cell_shape.xml" />
-        <option value="$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompView.java" />
+        <option value="$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/comps_view.xml" />
+        <option value="$PROJECT_DIR$/res/layout/comps_row.xml" />
+        <option value="$PROJECT_DIR$/src/ru/synthet/synthit/model/CompsArrayProvider.java" />
+        <option value="$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompView.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="-1" />
     <option name="y" value="24" />
-    <option name="width" value="1600" />
-    <option name="height" value="852" />
+    <option name="width" value="1602" />
+    <option name="height" value="853" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -292,6 +309,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -441,7 +459,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -540,19 +557,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -578,6 +582,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -778,7 +795,11 @@
       <created>1394102666354</created>
       <updated>1394102666354</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="CompView&#10;">
+      <created>1394108041573</created>
+      <updated>1394108041573</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -802,7 +823,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1600" height="852" extended-state="6" />
+    <frame x="-1" y="24" width="1602" height="853" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14607465" sideWeight="0.7262411" order="3" side_tool="false" content_ui="tabs" />
@@ -818,13 +839,13 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.281471" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41867045" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="12" y="275" width="1554" height="193" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37623763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="12" y="275" width="1554" height="193" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3281471" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24903722" sideWeight="0.7262411" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1784339" sideWeight="0.7262411" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18870346" sideWeight="0.7262411" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27298445" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -875,10 +896,45 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="14" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+          <folding>
+            <element signature="e#2457#2465#0" expanded="true" />
+            <element signature="e#2523#2531#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="60" selection-start="981" selection-end="981" vertical-scroll-proportion="0.0" vertical-offset="193" max-vertical-offset="855">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="67" selection-start="4284" selection-end="4284" vertical-scroll-proportion="0.0" vertical-offset="1500" max-vertical-offset="2685">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/Contract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="19" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="960">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/Contract.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="62" selection-start="830" selection-end="1998" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="960">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -899,27 +955,21 @@
     <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/BaseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="35" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2100">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="133" column="54" selection-start="4723" selection-end="4723" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2295">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="91" column="27" selection-start="3303" selection-end="3303" vertical-scroll-proportion="0.0" vertical-offset="1365" max-vertical-offset="2250">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -933,37 +983,30 @@
     <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="110" column="0" selection-start="3877" selection-end="3877" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2265">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="0" selection-start="955" selection-end="1064" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="780">
-          <folding>
-            <element signature="e#513#531#0" expanded="true" />
-            <element signature="e#706#724#0" expanded="true" />
-            <element signature="e#862#880#0" expanded="true" />
-            <element signature="e#1013#1031#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/Contract.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="56" column="72" selection-start="2708" selection-end="2708" vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="960">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/BaseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="53" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="2100">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1005,14 +1048,6 @@
         <state line="980" column="0" selection-start="43488" selection-end="43488" vertical-scroll-proportion="-0.37634408" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/item_view.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SynthIT.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
@@ -1024,11 +1059,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
@@ -1053,25 +1088,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main_menu.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <folding />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="98" selection-start="2456" selection-end="2456" vertical-scroll-proportion="0.79107505" vertical-offset="0" max-vertical-offset="900">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="67" selection-start="4284" selection-end="4284" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2565">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
           <folding />
         </state>
       </provider>
@@ -1085,9 +1106,7 @@
     </entry>
     <entry file="file://$USER_HOME$/android-sdk-linux/sources/android-17/android/widget/Adapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="11" selection-start="2114" selection-end="2114" vertical-scroll-proportion="1.3398058" vertical-offset="0" max-vertical-offset="2115">
-          <folding />
-        </state>
+        <state line="62" column="11" selection-start="2114" selection-end="2114" vertical-scroll-proportion="1.3398058" vertical-offset="0" max-vertical-offset="2115" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/android-sdk-linux/sources/android-17/android/database/Cursor.java">
@@ -1104,18 +1123,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/Contract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="19" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="945">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/libs/android-support-v4.jar!/android/support/v4/content/CursorLoader.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="11" selection-start="829" selection-end="829" vertical-scroll-proportion="0.33186814" vertical-offset="149" max-vertical-offset="855">
-          <folding />
-        </state>
+        <state line="21" column="11" selection-start="829" selection-end="829" vertical-scroll-proportion="0.33186814" vertical-offset="149" max-vertical-offset="855" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/cell_shape.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="51" selection-start="249" selection-end="249" vertical-scroll-proportion="0.24861878" vertical-offset="0" max-vertical-offset="362" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/MainMenu.java">
@@ -1125,37 +1140,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/Contract.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="60" selection-start="981" selection-end="981" vertical-scroll-proportion="0.0" vertical-offset="193" max-vertical-offset="855">
+        <state line="5" column="19" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="945">
           <folding>
-            <element signature="e#513#531#0" expanded="true" />
-            <element signature="e#706#724#0" expanded="true" />
-            <element signature="e#862#880#0" expanded="true" />
-            <element signature="e#1013#1031#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/user_dialog.xml">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/provider/RestProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="20" selection-start="3058" selection-end="3078" vertical-scroll-proportion="0.7403315" vertical-offset="332" max-vertical-offset="780">
+        <state line="80" column="45" selection-start="3763" selection-end="3763" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="2565">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/BaseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="34" selection-start="1001" selection-end="1001" vertical-scroll-proportion="0.0" vertical-offset="586" max-vertical-offset="2100">
+        <state line="26" column="4" selection-start="971" selection-end="1009" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1860">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/android-sdk-linux/sources/android-17/android/app/LoadedApk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="515" column="0" selection-start="19306" selection-end="19306" vertical-scroll-proportion="0.33163264" vertical-offset="6605" max-vertical-offset="15930">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/item_view.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/android-sdk-linux/sources/android-17/android/widget/ArrayAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="13" selection-start="1860" selection-end="1860" vertical-scroll-proportion="0.8035714" vertical-offset="0" max-vertical-offset="7380">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/comps_view.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="7" column="4" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/CompsArrayProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="80" selection-start="1616" selection-end="1616" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable/cell_shape.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/comps_row.xml">
+      <provider editor-type-id="text-editor">
+        <state line="15" column="14" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="51" selection-start="249" selection-end="249" vertical-scroll-proportion="0.24861878" vertical-offset="0" max-vertical-offset="362">
+        <state line="27" column="0" selection-start="993" selection-end="1242" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2025">
           <folding />
         </state>
       </provider>
@@ -1163,38 +1236,39 @@
     <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/UsersActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="134" column="0" selection-start="4763" selection-end="4937" vertical-scroll-proportion="0.0" vertical-offset="1624" max-vertical-offset="2175">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompsActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/CompsOperation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="948" selection-end="991" vertical-scroll-proportion="20.518518" vertical-offset="929" max-vertical-offset="2340">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="42" column="98" selection-start="2456" selection-end="2456" vertical-scroll-proportion="0.0" vertical-offset="394" max-vertical-offset="900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/model/operations/UsersOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="73" selection-start="1900" selection-end="1925" vertical-scroll-proportion="0.0" vertical-offset="118" max-vertical-offset="780">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/synthet/synthit/ui/CompView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="14" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.0" vertical-offset="362" max-vertical-offset="1020">
+        <state line="74" column="69" selection-start="2746" selection-end="2746" vertical-scroll-proportion="0.6505102" vertical-offset="615" max-vertical-offset="1470">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2457#2465#0" expanded="true" />
+            <element signature="e#2523#2531#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/comps_view.xml">
-      <provider editor-type-id="text-editor">
-        <state line="60" column="19" selection-start="3455" selection-end="3455" vertical-scroll-proportion="0.0" vertical-offset="712" max-vertical-offset="1035">
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="32" selection-start="179" selection-end="179" vertical-scroll-proportion="0.114795916" vertical-offset="0" max-vertical-offset="855">
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
   </component>
